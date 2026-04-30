@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #333;
+
+}
+/* Cabeçalho e Menu */
+.cabecalho {
+    text-align: center;
+    padding: 20px;
+    border-bottom: px solid #ffffff;
+}
+
+.logo {
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #555;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+/* Banner */
+.banner {
+    background-color:     #ffffffad;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Vitrine de Produtos */
+.conteudo {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.grade-produtos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Para os itens descerem no celular */
+}
+
+.cartao-produto {
+    width: 250px;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #f0f0f0;
+}
+
+.foto-produto {
+    width: 100%;
+    height: 200px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Rodapé */
+.rodape {
+    text-align: center;
+    padding: 30px;
+    font-size: 12px;
+    border-top: 1px solid #eeeeee;
+}
