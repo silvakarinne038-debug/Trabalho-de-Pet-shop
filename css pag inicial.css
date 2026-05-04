@@ -78,4 +78,578 @@ button {
     padding: 30px;
     font-size: 12px;
     border-top: 1px solid #eeeeee;
+}/* ── RESET E ESTILOS GERAIS ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── BARRA DE PROMOÇÃO ── */
+.barra-promo {
+  background-color: #2c7a4b;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.barra-promo span {
+  color: #a8e6bf;
+  font-weight: bold;
+}
+
+/* ── HEADER ── */
+.header-topo {
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 14px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2c7a4b;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: #f4a01c;
+}
+
+.barra-pesquisa {
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+  border: 2px solid #2c7a4b;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.barra-pesquisa input {
+  flex: 1;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  outline: none;
+}
+
+.barra-pesquisa button {
+  background-color: #2c7a4b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.header-acoes {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-acoes a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  color: #555;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.header-acoes a:hover {
+  color: #2c7a4b;
+}
+
+.icone {
+  font-size: 22px;
+}
+
+.badge-carrinho {
+  position: relative;
+  display: inline-block;
+}
+
+.badge-carrinho .badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: #f4a01c;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── MENU NAV ── */
+.menu-nav {
+  background-color: #2c7a4b;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+}
+
+.menu-nav a {
+  color: white;
+  padding: 12px 22px;
+  font-size: 14px;
+  display: block;
+  transition: background 0.2s;
+}
+
+.menu-nav a:hover {
+  background-color: #1e5c38;
+}
+
+.menu-nav a.destaque {
+  background-color: #f4a01c;
+  font-weight: bold;
+}
+
+.menu-nav a.destaque:hover {
+  background-color: #d4880f;
+}
+
+/* ── BANNER PRINCIPAL ── */
+.banner {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.banner-texto {
+  max-width: 500px;
+}
+
+.banner-texto .tag {
+  background-color: #f4a01c;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+.banner-texto h1 {
+  font-size: 38px;
+  color: #1e5c38;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.banner-texto p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.banner-texto .btn-banner {
+  background-color: #2c7a4b;
+  color: white;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.banner-texto .btn-banner:hover {
+  background-color: #1e5c38;
+}
+
+.banner-imagem {
+  font-size: 120px;
+  line-height: 1;
+}
+
+/* ── CATEGORIAS ── */
+.secao {
+  padding: 50px 40px;
+}
+
+.secao-titulo {
+  text-align: center;
+  font-size: 24px;
+  color: #2c7a4b;
+  margin-bottom: 8px;
+}
+
+.secao-subtitulo {
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 32px;
+}
+
+.grade-categorias {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cartao-categoria {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  width: 130px;
+  text-align: center;
+  padding: 22px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cartao-categoria:hover {
+  border-color: #2c7a4b;
+  box-shadow: 0 4px 14px rgba(44,122,75,0.15);
+  transform: translateY(-3px);
+}
+
+.cartao-categoria .emoji {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.cartao-categoria p {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ── PRODUTOS ── */
+.secao-cinza {
+  background-color: #f0f0eb;
+}
+
+.grade-produtos {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.cartao-produto {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  width: 210px;
+  text-align: center;
+  padding: 0 0 18px 0;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.cartao-produto:hover {
+  border-color: #2c7a4b;
+  box-shadow: 0 6px 20px rgba(44,122,75,0.15);
+  transform: translateY(-4px);
+}
+
+.foto-produto {
+  width: 100%;
+  height: 160px;
+  background-color: #e8f5e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.tag-produto {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #f4a01c;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.tag-produto.novo {
+  background-color: #2c7a4b;
+}
+
+.cartao-produto h3 {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+  padding: 0 12px;
+}
+
+.cartao-produto .avaliacao {
+  color: #f4a01c;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.cartao-produto .avaliacao span {
+  color: #888;
+  font-size: 11px;
+}
+
+.preco-bloco {
+  margin-bottom: 14px;
+  padding: 0 12px;
+}
+
+.preco-antigo {
+  font-size: 12px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.preco-atual {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c7a4b;
+}
+
+.btn-comprar {
+  background-color: #2c7a4b;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  width: calc(100% - 24px);
+  margin: 0 12px;
+  transition: background 0.2s;
+}
+
+.btn-comprar:hover {
+  background-color: #1e5c38;
+}
+
+/* ── BANNER PROMO DUPLO ── */
+.banners-duplos {
+  display: flex;
+  gap: 20px;
+  padding: 40px 40px;
+  flex-wrap: wrap;
+}
+
+.banner-mini {
+  flex: 1;
+  min-width: 260px;
+  border-radius: 14px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-mini.verde {
+  background: linear-gradient(135deg, #2c7a4b, #1a5230);
+  color: white;
+}
+
+.banner-mini.laranja {
+  background: linear-gradient(135deg, #f4a01c, #c47c0a);
+  color: white;
+}
+
+.banner-mini h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.banner-mini p {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.banner-mini button {
+  background-color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.banner-mini.verde button { color: #2c7a4b; }
+.banner-mini.laranja button { color: #f4a01c; }
+
+.banner-mini .emoji-bg {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  font-size: 80px;
+  opacity: 0.2;
+}
+
+/* ── VANTAGENS ── */
+.grade-vantagens {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cartao-vantagem {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  width: 200px;
+}
+
+.cartao-vantagem .icone-grande {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.cartao-vantagem h4 {
+  font-size: 14px;
+  color: #2c7a4b;
+  margin-bottom: 6px;
+}
+
+.cartao-vantagem p {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.5;
+}
+
+/* ── RODAPÉ ── */
+.rodape {
+  background-color: #1a3a28;
+  color: #ccc;
+  padding: 50px 40px 20px;
+  margin-top: 0;
+}
+
+.rodape-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.rodape-col {
+  flex: 1;
+  min-width: 160px;
+}
+
+.rodape-col h4 {
+  color: white;
+  font-size: 15px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #2c7a4b;
+  padding-bottom: 8px;
+}
+
+.rodape-col p, .rodape-col a {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 2;
+  display: block;
+  cursor: pointer;
+}
+
+.rodape-col a:hover {
+  color: #a8e6bf;
+}
+
+.rodape-col .logo-rodape {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.rodape-col .logo-rodape span {
+  color: #f4a01c;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.redes-sociais a {
+  background-color: #2c7a4b;
+  color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.redes-sociais a:hover {
+  background-color: #f4a01c;
+}
+
+.rodape-bottom {
+  border-top: 1px solid #2c7a4b;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.pagamentos {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pagamentos span {
+  background-color: white;
+  color: #333;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 4px;
 }
