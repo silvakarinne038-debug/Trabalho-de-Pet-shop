@@ -1,273 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css pag inicial.css">
-<!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PetClub | Loja de Animais Online</title>
-  <!-- Link para o arquivo CSS externo -->
-  <link rel="stylesheet" href="style.css">
+  <title>PetClub</title>
+  <link rel="stylesheet" href="css pag inicial.css">
 </head>
 <body>
 
-  <!-- BARRA DE PROMOÇÃO -->
-  <div class="barra-promo">
-    🚚 Frete grátis para compras acima de <span>$ 149,90</span> — Use o cupão <span>PETCLUB10</span> e ganhe 10% de desconto!
+  <!-- TOPO -->
+  <div class="topo">
+    <h1>PetClub</h1>
+    <p>Frete grátis acima de $ 149,90 | Cupom: PETCLUB10</p>
   </div>
 
-  <!-- HEADER -->
-  <header class="header-topo">
-    <div class="logo">PET<span>CLUB</span></div>
+  <!-- MENU -->
+  <div class="menu">
+    <a href="#">Cães</a>
+    <a href="#">Gatos</a>
+    <a href="#">Aves</a>
+    <a href="#">Peixes</a>
+    <a href="#">Ofertas</a>
+  </div>
 
-    <div class="barra-pesquisa">
-      <input type="text" placeholder="Pesquise ração, brinquedos, acessórios...">
-      <button>🔍</button>
-    </div>
+  <!-- BANNER -->
+  <div class="banner">
+    <h2>Tudo para o seu pet!</h2>
+    <p>Ração, brinquedos e acessórios com entrega rápida.</p>
+    <button>Ver produtos</button>
+  </div>
 
-    <div class="header-acoes">
-      <a href="#">
-        <span class="icone">👤</span>
-        <span>Entrar</span>
-      </a>
-      <a href="#">
-        <span class="icone">❤️</span>
-        <span>Favoritos</span>
-      </a>
-      <a href="#">
-        <div class="badge-carrinho">
-          <span class="icone">🛒</span>
-          <span class="badge">3</span>
-        </div>
-        <span>Carrinho</span>
-      </a>
-    </div>
-  </header>
+  <!-- PRODUTOS -->
+  <div class="secao">
+    <h3>Produtos em Destaque</h3>
+    <div class="produtos">
 
-  <!-- MENU NAVEGAÇÃO -->
-  <nav class="menu-nav">
-    <a href="#">🐶 Cães</a>
-    <a href="#">🐱 Gatos</a>
-    <a href="#">🐦 Aves</a>
-    <a href="#">🐟 Peixes</a>
-    <a href="#">🐹 Roedores</a>
-    <a href="#">🏥 Veterinário</a>
-    <a href="#">✂️ Banho & Tosa</a>
-    <a href="#" class="destaque">🔥 Ofertas</a>
-  </nav>
-
-  <!-- BANNER PRINCIPAL -->
-  <section class="banner">
-    <div class="banner-texto">
-      <span class="tag">✨ NOVIDADE 2026</span>
-      <h1>Tudo para o seu<br>melhor amigo!</h1>
-      <p>Ração premium, brinquedos, acessórios e muito mais.<br>Produtos de qualidade com entrega rápida para todo o Brasil.</p>
-      <a href="#" class="btn-banner">Ver todos os produtos →</a>
-    </div>
-    <div class="banner-imagem">🐕</div>
-  </section>
-
-  <!-- CATEGORIAS -->
-  <section class="secao">
-    <h2 class="secao-titulo">Comprar por categoria</h2>
-    <p class="secao-subtitulo">Encontre tudo o que o seu pet precisa</p>
-
-    <div class="grade-categorias">
-      <div class="cartao-categoria">
+      <div class="produto">
         <div class="emoji">🦴</div>
-        <p>Rações</p>
+        <h4>Ração Premium Cão 15kg</h4>
+        <div class="preco-antigo">R$ 189,90</div>
+        <div class="preco">R$ 149,90</div>
+        <button>Comprar</button>
       </div>
-      <div class="cartao-categoria">
+
+      <div class="produto">
         <div class="emoji">🎾</div>
-        <p>Brinquedos</p>
+        <h4>Brinquedo Interativo</h4>
+        <div class="preco">R$ 39,90</div>
+        <button>Comprar</button>
       </div>
-      <div class="cartao-categoria">
+
+      <div class="produto">
         <div class="emoji">🏠</div>
-        <p>Casinhas</p>
-      </div>
-      <div class="cartao-categoria">
-        <div class="emoji">🪮</div>
-        <p>Higiene</p>
-      </div>
-      <div class="cartao-categoria">
-        <div class="emoji">💊</div>
-        <p>Saúde</p>
-      </div>
-      <div class="cartao-categoria">
-        <div class="emoji">🦮</div>
-        <p>Coleiras</p>
-      </div>
-      <div class="cartao-categoria">
-        <div class="emoji">😴</div>
-        <p>Camas</p>
-      </div>
-      <div class="cartao-categoria">
-        <div class="emoji">🐾</div>
-        <p>Acessórios</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUTOS EM DESTAQUE -->
-  <section class="secao secao-cinza">
-    <h2 class="secao-titulo">Produtos em Destaque</h2>
-    <p class="secao-subtitulo">Os mais vendidos da semana</p>
-
-    <div class="grade-produtos">
-      <div class="cartao-produto">
-        <div class="foto-produto">
-          <span class="tag-produto">-20%</span>
-          🦴
-        </div>
-        <h3>Ração Premium Cão Adulto 15kg</h3>
-        <div class="avaliacao">★★★★★ <span>(128)</span></div>
-        <div class="preco-bloco">
-          <div class="preco-antigo">R$ 189,90</div>
-          <div class="preco-atual">R$ 149,90</div>
-        </div>
-        <button class="btn-comprar">Adicionar ao Carrinho</button>
+        <h4>Casinha Confort M</h4>
+        <div class="preco-antigo">R$ 149,90</div>
+        <div class="preco">R$ 119,90</div>
+        <button>Comprar</button>
       </div>
 
-      <div class="cartao-produto">
-        <div class="foto-produto">
-          <span class="tag-produto novo">NOVO</span>
-          🎾
-        </div>
-        <h3>Brinquedo Interativo Anti-Stress</h3>
-        <div class="avaliacao">★★★★☆ <span>(64)</span></div>
-        <div class="preco-bloco">
-          <div class="preco-atual">R$ 39,90</div>
-        </div>
-        <button class="btn-comprar">Adicionar ao Carrinho</button>
+      <div class="produto">
+        <div class="emoji">🐱</div>
+        <h4>Ração Gato Castrado 3kg</h4>
+        <div class="preco-antigo">R$ 79,90</div>
+        <div class="preco">R$ 67,90</div>
+        <button>Comprar</button>
       </div>
 
-      <div class="cartao-produto">
-        <div class="foto-produto">🏠</div>
-        <h3>Casinha Confort Tamanho M</h3>
-        <div class="avaliacao">★★★★★ <span>(92)</span></div>
-        <div class="preco-bloco">
-          <div class="preco-antigo">R$ 149,90</div>
-          <div class="preco-atual">R$ 119,90</div>
-        </div>
-        <button class="btn-comprar">Adicionar ao Carrinho</button>
-      </div>
-
-      <div class="cartao-produto">
-        <div class="foto-produto">
-          <span class="tag-produto">-15%</span>
-          🐱
-        </div>
-        <h3>Ração Gato Castrado Frango 3kg</h3>
-        <div class="avaliacao">★★★★★ <span>(205)</span></div>
-        <div class="preco-bloco">
-          <div class="preco-antigo">R$ 79,90</div>
-          <div class="preco-atual">R$ 67,90</div>
-        </div>
-        <button class="btn-comprar">Adicionar ao Carrinho</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- BANNERS DUPLOS -->
-  <div class="banners-duplos">
-    <div class="banner-mini verde">
-      <h3>🐕 Semana do Cão</h3>
-      <p>Até 30% de desconto em rações, brinquedos e acessórios para cães.</p>
-      <button>Ver ofertas</button>
-      <span class="emoji-bg">🦴</span>
-    </div>
-    <div class="banner-mini laranja">
-      <h3>🐱 Especial Gatos</h3>
-      <p>Produtos exclusivos para o seu felino com frete grátis nesta semana.</p>
-      <button>Aproveitar</button>
-      <span class="emoji-bg">🐾</span>
     </div>
   </div>
 
   <!-- VANTAGENS -->
-  <section class="secao">
-    <h2 class="secao-titulo">Por que escolher a PetClub?</h2>
-    <p class="secao-subtitulo">Comprometidos com o bem-estar do seu animal</p>
+  <div class="vantagens">
+    <h3>Por que comprar na PetClub?</h3>
+    <div class="lista-vantagens">
 
-    <div class="grade-vantagens">
-      <div class="cartao-vantagem">
-        <div class="icone-grande">🚚</div>
-        <h4>Frete Grátis</h4>
-        <p>Em compras acima de R$ 149,90 para todo o Brasil</p>
+      <div class="vantagem">
+        <div class="emoji">🚚</div>
+        <p>Frete grátis acima de R$ 149,90</p>
       </div>
-      <div class="cartao-vantagem">
-        <div class="icone-grande">🔒</div>
-        <h4>Compra Segura</h4>
-        <p>Pagamento 100% seguro com criptografia SSL</p>
+
+      <div class="vantagem">
+        <div class="emoji">🔒</div>
+        <p>Pagamento seguro</p>
       </div>
-      <div class="cartao-vantagem">
-        <div class="icone-grande">↩️</div>
-        <h4>Troca Fácil</h4>
-        <p>Troque ou devolva em até 30 dias sem complicação</p>
+
+      <div class="vantagem">
+        <div class="emoji">↩️</div>
+        <p>Troca em até 30 dias</p>
       </div>
-      <div class="cartao-vantagem">
-        <div class="icone-grande">💬</div>
-        <h4>Suporte 24h</h4>
-        <p>Atendimento via chat, WhatsApp e e-mail todos os dias</p>
+
+      <div class="vantagem">
+        <div class="emoji">💬</div>
+        <p>Suporte 24 horas</p>
       </div>
+
     </div>
-  </section>
+  </div>
 
   <!-- RODAPÉ -->
-  <footer class="rodape">
-    <div class="rodape-grid">
-      <div class="rodape-col">
-        <div class="logo-rodape">PET<span>CLUB</span></div>
-        <p>A maior loja de animais online do Brasil. Qualidade e amor para o seu pet.</p>
-        <div class="redes-sociais">
-          <a href="#">📘</a>
-          <a href="#">📸</a>
-          <a href="#">▶️</a>
-          <a href="#">💬</a>
-        </div>
-      </div>
-
-      <div class="rodape-col">
-        <h4>Institucional</h4>
-        <a href="#">Sobre nós</a>
-        <a href="#">Trabalhe conosco</a>
-        <a href="#">Blog Pet</a>
-        <a href="#">Política de Privacidade</a>
-      </div>
-
-      <div class="rodape-col">
-        <h4>Atendimento</h4>
-        <a href="#">Central de Ajuda</a>
-        <a href="#">Rastrear pedido</a>
-        <a href="#">Trocas e Devoluções</a>
-        <a href="#">Fale Conosco</a>
-      </div>
-
-      <div class="rodape-col">
-        <h4>Contato</h4>
-        <p>📍 Rua dos Pets, 123 — São Paulo, SP</p>
-        <p>📞 (11) 99999-0000</p>
-        <p>✉️ contato@petclub.com.br</p>
-        <p>⏰ Seg–Sex: 8h às 18h</p>
-      </div>
-    </div>
-
-    <div class="rodape-bottom">
-      <p>© 2026 PetClub — Todos os direitos reservados</p>
-      <div class="pagamentos">
-        <span>VISA</span>
-        <span>MASTER</span>
-        <span>PIX</span>
-        <span>BOLETO</span>
-        <span>AMEX</span>
-      </div>
-    </div>
-  </footer>
+  <div class="rodape">
+    <p>PetClub — A maior loja de pets do Brasil</p>
+    <p>contato@petclub.com.br | (11) 99999-0000</p>
+    <p>© 2026 PetClub</p>
+  </div>
 
 </body>
 </html>
