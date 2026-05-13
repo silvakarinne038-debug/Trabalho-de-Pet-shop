@@ -183,12 +183,11 @@ header {
   z-index: 100;
 }
 
-.cao-wrap {
+.Ave-wrap {
   position: absolute;
   bottom: -25px;
   left: -100px;
   animation: correr 8s linear infinite;
-  transform: scaleX(-1);
   z-index: 50;
 }
 
@@ -196,3 +195,5 @@ header {
   0%   { left: -100px; }
   100% { left: 110%; }
 }
+
+
