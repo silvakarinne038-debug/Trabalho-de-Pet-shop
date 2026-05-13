@@ -14,12 +14,8 @@ a {
   color: #333333;
 }
 
-/* ---- NAVBAR ---- */
-header {
-  background-color: #ffffff;
-  border-bottom: 2px solid #ff7b25;
-  padding: 15px 30px;
-}
+
+
 
 .nav-container {
   display: flex;
@@ -271,4 +267,28 @@ footer {
 .footer-copy {
   color: #888888;
   font-size: 12px;
+
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ff7b25;
+  padding: 15px 30px;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.cao-wrap {
+  position: absolute;
+  bottom: -25px;
+  left: -100px;
+  animation: correr 8s linear infinite;
+  transform: scaleX(-1);
+  z-index: 50;
+}
+
+@keyframes correr {
+  0%   { left: -100px; }
+  100% { left: 110%; }
 }
