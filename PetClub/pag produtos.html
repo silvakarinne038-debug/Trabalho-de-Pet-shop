@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos | Pet City</title>
+  <link rel="stylesheet" href="pag produtos.css">
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="Ave-wrap">
+  <lottie-player 
+    src="Ave.json" 
+    background="transparent" 
+    speed="1" 
+    style="width: 80px; height: 80px;" 
+    loop 
+    autoplay>
+  </lottie-player>
+</div>
+    <div class="nav-container">
+      <div class="logo"><a href="site pag inicial.html" style="color:#ff7b25;text-decoration:none;">Pet City</a></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="site pag inicial.html">Início</a></li>
+          <li><a href="pag produtos.html" class="active">Produtos</a></li>
+          <li><a href="animais.html">Animais</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <h1>Os nossos <span>Produtos</span></h1>
+    <p>Encontra tudo o que o teu animal precisa</p>
+  </div>
+
+  <div class="page-content">
+    <div class="filtros">
+      <button class="filtro-btn active" onclick="filtrar('todos',this)">Todos</button>
+      <button class="filtro-btn" onclick="filtrar('caes',this)">Cães</button>
+      <button class="filtro-btn" onclick="filtrar('gatos',this)">Gatos</button>
+      <button class="filtro-btn" onclick="filtrar('peixes',this)">Peixes</button>
+      <button class="filtro-btn" onclick="filtrar('aves',this)">Aves</button>
+    </div>
+
+    <div class="produtos-grid" id="prod-grid">
+
+      <div class="produto-card" data-cat="caes">
+        <div class="foto-produto">
+          <img src="Imagens/produto-racao-cao.png" alt="Ração Premium Cão">
+        </div>
+        <div class="produto-info">
+          <h3>Ração Premium Cão</h3>
+          <p>Ração seca para cães adultos. 5kg.</p>
+          <span class="preco">€24,99</span>
+          <button class="btn-carrinho" onclick="addCart('Ração Premium Cão')">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-cat="gatos">
+        <div class="foto-produto">
+          <img src="Imagens/produto-racao-gato.png" alt="Ração Gato Adulto">
+        </div>
+        <div class="produto-info">
+          <h3>Ração Gato Adulto</h3>
+          <p>Ração húmida para gatos. Pack 12 latas.</p>
+          <span class="preco">€18,99</span>
+          <button class="btn-carrinho" onclick="addCart('Ração Gato Adulto')">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-cat="caes">
+        <div class="foto-produto">
+          <img src="Imagens/produto-brinquedos.png" alt="Kit Brinquedos Cão">
+        </div>
+        <div class="produto-info">
+          <h3>Kit Brinquedos Cão</h3>
+          <p>Conjunto com 5 brinquedos variados.</p>
+          <span class="preco">€14,99</span>
+          <button class="btn-carrinho" onclick="addCart('Kit Brinquedos Cão')">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-cat="gatos">
+        <div class="foto-produto">
+          <img src="Imagens/produto-cama.png" alt="Cama para Gato">
+        </div>
+        <div class="produto-info">
+          <h3>Cama para Gato</h3>
+          <p>Cama confortável com almofada. Tamanho M.</p>
+          <span class="preco">€19,99</span>
+          <button class="btn-carrinho" onclick="addCart('Cama para Gato')">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-cat="peixes">
+        <div class="foto-produto">
+          <img src="Imagens/produto-aquario.png" alt="Aquário Starter Kit">
+        </div>
+        <div class="produto-info">
+          <h3>Aquário Starter Kit</h3>
+          <p>Aquário 20L com filtro e LED.</p>
+          <span class="preco">€39,99</span>
+          <button class="btn-carrinho" onclick="addCart('Aquário Starter Kit')">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-cat="caes">
+        <div class="foto-produto">
+          <img src="Imagens/produto-coleira.png" alt="Coleira Refletora">
+        </div>
+        <div class="produto-info">
+          <h3>Coleira Refletora</h3>
+          <p>Coleira LED para passeios noturnos.</p>
+          <span class="preco">€12,99</span>
+          <button class="btn-carrinho" onclick="addCart('Coleira Refletora')">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-cat="aves">
+        <div class="foto-produto">
+          <img src="Imagens/produto-gaiola.png" alt="Gaiola Compacta">
+        </div>
+        <div class="produto-info">
+          <h3>Gaiola Compacta</h3>
+          <p>Gaiola para pássaros pequenos.</p>
+          <span class="preco">€29,99</span>
+          <button class="btn-carrinho" onclick="addCart('Gaiola Compacta')">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-cat="peixes">
+        <div class="foto-produto">
+          <img src="Imagens/produto-alimento-peixe.png" alt="Alimento Peixes">
+        </div>
+        <div class="produto-info">
+          <h3>Alimento Peixes</h3>
+          <p>Flocos nutritivos para peixes tropicais. 200g.</p>
+          <span class="preco">€7,99</span>
+          <button class="btn-carrinho" onclick="addCart('Alimento Peixes')">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-cat="aves">
+        <div class="foto-produto">
+          <img src="Imagens/produto-sementes.png" alt="Sementes Mistura">
+        </div>
+        <div class="produto-info">
+          <h3>Sementes Mistura</h3>
+          <p>Mistura de sementes para aves. 1kg.</p>
+          <span class="preco">€9,99</span>
+          <button class="btn-carrinho" onclick="addCart('Sementes Mistura')">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      
