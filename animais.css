@@ -101,3 +101,208 @@ footer {
 .footer-links a { color: #cccccc; font-size: 14px; }
 .footer-links a:hover { color: #ff7b25; }
 .footer-copy { color: #888888; font-size: 12px; }
+
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+}
+
+/* HEADER */
+
+header{
+    background: #ff914d;
+    padding: 15px 40px;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nav-links{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: #ffe0c7;
+}
+
+/* HERO */
+
+.hero{
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #ff914d, #ffbd59);
+    color: white;
+}
+
+.hero h1{
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p{
+    font-size: 18px;
+}
+
+/* SEÇÕES */
+
+.categoria{
+    padding: 60px 8%;
+}
+
+.titulo-secao{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 45px;
+    color: #333;
+}
+
+/* GRID */
+
+.animais-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    align-items: stretch;
+}
+
+/* FLASH CARDS */
+
+.animal-card{
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.animal-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+}
+
+/* IMAGENS */
+
+.animal-card img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+/* INFO */
+
+.animal-info{
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.animal-info h3{
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #ff914d;
+    font-size: 24px;
+}
+
+.animal-info p{
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* PREÇO */
+
+.preco{
+    margin-top: auto;
+    background: #ff914d;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: bold;
+    width: fit-content;
+    font-size: 18px;
+}
+
+/* FOOTER */
+
+footer{
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    margin-top: 50px;
+}
+
+.footer-logo{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.footer-links{
+    margin: 20px 0;
+}
+
+.footer-links a{
+    color: #ffbd59;
+    text-decoration: none;
+    margin: 0 12px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover{
+    color: white;
+}
+
+.footer-copy{
+    margin-top: 20px;
+    color: #aaa;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 768px){
+
+    .hero h1{
+        font-size: 36px;
+    }
+
+    .nav-container{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .animal-card img{
+        height: 220px;
+    }
+}
