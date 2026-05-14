@@ -1,5 +1,4 @@
-/* Estilo geral da página */
-/* Estilo geral da página */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -8,13 +7,13 @@ body {
   color: #333333;
 }
 
-/* Links sem sublinhado */
+
 a {
   text-decoration: none;
   color: #333333;
 }
 
-/* ---- NAVBAR ---- */
+
 header {
   background-color: #ffffff;
   border-bottom: 2px solid #ff7b25;
@@ -77,7 +76,7 @@ header {
   margin: 20px auto 0;
 }
 
-/* ---- BOTÕES ---- */
+
 .btn-laranja {
   background-color: #ff7b25;
   color: white;
@@ -109,14 +108,14 @@ header {
   color: white;
 }
 
-/* ---- TÍTULOS DE SECÇÃO ---- */
+
 .titulo-secao {
   text-align: center;
   font-size: 28px;
   margin: 40px 0 20px;
 }
 
-/* ---- CATEGORIAS ---- */
+
 .categorias {
   padding: 20px 30px;
 }
@@ -152,7 +151,7 @@ header {
   margin-bottom: 12px;
 }
 
-/* ---- PRODUTOS ---- */
+
 .produtos {
   padding: 20px 30px;
 }
