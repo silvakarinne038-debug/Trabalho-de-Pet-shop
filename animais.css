@@ -1,0 +1,103 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+a { text-decoration: none; color: #333333; }
+
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 24px; font-weight: bold; color: #ff7b25; }
+.nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+.nav-links a { font-size: 16px; font-weight: bold; }
+.nav-links a:hover { color: #ff7b25; }
+.nav-links a.active { color: #ff7b25; border-bottom: 2px solid #ff7b25; padding-bottom: 2px; }
+
+.page-header {
+  background-color: #fff3e8;
+  padding: 40px 30px;
+  text-align: center;
+  border-bottom: 2px solid #ff7b25;
+}
+
+.page-header h1 { font-size: 32px; margin: 0 0 8px; }
+.page-header h1 span { color: #ff7b25; }
+.page-header p { color: #666; margin: 0; }
+
+.page-content { max-width: 1100px; margin: 0 auto; padding: 30px; }
+
+.animal-grid { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+
+.animal-card {
+  background: #fff3e8;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  width: 220px;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.animal-card:hover {
+  border-color: #ff7b25;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(255,123,37,.2);
+}
+
+.animal-card .big-emoji {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.animal-card .big-emoji img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ff7b25;
+}
+
+.animal-card h3 { font-size: 20px; margin-bottom: 6px; color: #ff7b25; }
+.animal-card p { font-size: 13px; color: #666; margin-bottom: 14px; }
+
+.animal-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.animal-tag {
+  background: white;
+  border: 1px solid #ff7b25;
+  color: #ff7b25;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+
+.preco {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff7b25;
+}
+
+footer {
+  background-color: #333333;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.footer-logo { font-size: 22px; font-weight: bold; color: #ff7b25; margin-bottom: 10px; }
+.footer-links { display: flex; justify-content: center; gap: 20px; margin: 15px 0; }
+.footer-links a { color: #cccccc; font-size: 14px; }
+.footer-links a:hover { color: #ff7b25; }
+.footer-copy { color: #888888; font-size: 12px; }
