@@ -1,4 +1,4 @@
-** { box-sizing: border-box; }
+* { box-sizing: border-box; }
 
 body {
   font-family: Arial, sans-serif;
@@ -21,7 +21,6 @@ header {
   display: flex;
   align-items: center;
 }
-
 
 .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
 .logo { font-size: 24px; font-weight: bold; color: #ff7b25; }
