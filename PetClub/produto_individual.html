@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produto | Pet Club</title>
+  <link rel="stylesheet" href="produto_individual.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="nav-container">
+      <div class="logo"><a href="site pag inicial.html" style="color:#ff7b25;text-decoration:none;">Pet Club</a></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="site pag inicial.html">Início</a></li>
+          <li><a href="pag_produtos.html" class="active">Produtos</a></li>
+          <li><a href="animais.html">Animais</a></li>
+          <li><a href="Contactos.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="page-header">
+    <a href="pag_produtos.html">Produtos</a>
+    <span> &rsaquo; </span>
+    <span id="breadcrumb-nome">Produto</span>
+  </div>
+
+  <!-- CONTEÚDO -->
+  <div class="produto-detalhe">
+
+    <!-- IMAGEM -->
+    <div class="produto-imagem">
+      <img id="prod-img" src="" alt="Imagem do produto">
+    </div>
+
+    <!-- INFO -->
+    <div class="produto-info">
+      <p class="produto-categoria" id="prod-categoria"></p>
+      <h1 class="produto-nome" id="prod-nome"></h1>
+      <p class="produto-preco" id="prod-preco"></p>
+      <p class="produto-descricao" id="prod-descricao"></p>
+
+      <div class="produto-detalhes">
+        <h4>Detalhes do produto</h4>
+        <div class="detalhe-linha">
+          <span>Categoria</span>
+          <span id="det-categoria"></span>
+        </div>
+        <div class="detalhe-linha">
+          <span>Peso</span>
+          <span id="det-peso"></span>
+        </div>
+        <div class="detalhe-linha">
+          <span>Indicado para</span>
+          <span id="det-indicado"></span>
+        </div>
+        <div class="detalhe-linha">
+          <span>Disponibilidade</span>
+          <span id="det-stock">Em stock</span>
+        </div>
+      </div>
+
+      <button class="btn-laranja" onclick="addCart()">Adicionar ao carrinho</button>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Pet Club</div>
+    <p>A tua loja de animais online de confiança.</p>
+    <div class="footer-links">
+      <a href="site pag inicial.html">Início</a>
+      <a href="pag_produtos.html">Produtos</a>
+      <a href="animais.html">Animais</a>
+      <a href="Contactos.html">Contacto</a>
+    </div>
+    <p class="footer-copy">© 2026 Pet Club. Todos os direitos reservados.</p>
+  </footer>
+
+  <div id="toast"></div>
+
+  <script>
+    // DADOS DOS PRODUTOS
+    const produtos = {
+      'racao-cao': {
+        nome: 'Ração Premium Cão',
+        preco: '€24,99',
+        categoria: 'Cães',
+        descricao: 'Ração seca para cães adultos. Formulada com ingredientes naturais para garantir uma alimentação equilibrada e saudável.',
+        peso: '5 kg',
+        indicado: 'Cães adultos',
+        img: 'Imagens/produto-racao-cao.png'
+      },
+      'racao-gato': {
+        nome: 'Ração Gato Adulto',
+        preco: '€18,99',
+        categoria: 'Gatos',
+        descricao: 'Ração húmida para gatos adultos. Pack com 12 latas de sabores variados, rica em proteínas e nutrientes essenciais.',
+        peso: 'Pack 12 latas',
+        indicado: 'Gatos adultos',
+        img: 'Imagens/produto-racao-gato.png'
+      },
+      'brinquedos-cao': {
+        nome: 'Kit Brinquedos Cão',
+        preco: '€14,99',
+        categoria: 'Cães',
+        descricao: 'Conjunto com 5 brinquedos variados para cães. Inclui bola, corda, mordedor e mais. Ideais para estimulação física e mental.',
+        peso: '—',
+        indicado: 'Cães de todas as idades',
+        img: 'Imagens/produto-brinquedos.png'
+      },
+      'cama-gato': {
+        nome: 'Cama para Gato',
+        preco: '€19,99',
+        categoria: 'Gatos',
+        descricao: 'Cama confortável com almofada interior removível e lavável. Ideal para gatos que gostam de lugares aconchegantes.',
+        peso: '—',
+        indicado: 'Gatos',
+        img: 'Imagens/produto-cama.png'
+      },
+      'aquario': {
+        nome: 'Aquário Starter Kit',
+        preco: '€39,99',
+        categoria: 'Peixes',
+        descricao: 'Kit completo para começar a ter peixes em casa. Inclui aquário de 20 litros, filtro e iluminação LED.',
+        peso: '20 L',
+        indicado: 'Peixes tropicais e água fria',
+        img: 'Imagens/produto-aquario.png'
+      },
+      'coleira': {
+        nome: 'Coleira Refletora',
+        preco: '€12,99',
+        categoria: 'Cães',
+        descricao: 'Coleira LED refletora para passeios noturnos. Mantém o teu cão visível e seguro durante a noite.',
+        peso: '—',
+        indicado: 'Cães de médio e grande porte',
+        img: 'Imagens/produto-coleira.png'
+      },
+      'gaiola': {
+        nome: 'Gaiola Compacta',
+        preco: '€29,99',
+        categoria: 'Aves',
+        descricao: 'Gaiola compacta para pássaros pequenos. Inclui poleiros, comedouro e bebedouro. Fácil de limpar.',
+        peso: '—',
+        indicado: 'Pássaros pequenos',
+        img: 'Imagens/produto-gaiola.png'
+      },
+      'alimento-peixe': {
+        nome: 'Alimento Peixes',
+        preco: '€7,99',
+        categoria: 'Peixes',
+        descricao: 'Flocos nutritivos para peixes tropicais. Fórmula equilibrada com vitaminas e minerais essenciais.',
+        peso: '200 g',
+        indicado: 'Peixes tropicais',
+        img: 'Imagens/produto-alimento-peixe.png'
+      },
+      'sementes': {
+        nome: 'Sementes Mistura',
+        preco: '€9,99',
+        categoria: 'Aves',
+        descricao: 'Mistura de sementes variadas para aves. Combinação equilibrada de cereais, oleaginosas e leguminosas.',
+        peso: '1 kg',
+        indicado: 'Aves em geral',
+        img: 'Imagens/produto-sementes.png'
+      }
+    };
+
+    // CARREGAR PRODUTO
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const p = produtos[id];
+
+    if (p) {
+      document.title = p.nome + ' | Pet Club';
+      document.getElementById('prod-nome').textContent = p.nome;
+      document.getElementById('prod-preco').textContent = p.preco;
+      document.getElementById('prod-categoria').textContent = p.categoria;
+      document.getElementById('prod-descricao').textContent = p.descricao;
+      document.getElementById('prod-img').src = p.img;
+      document.getElementById('prod-img').alt = p.nome;
+      document.getElementById('det-categoria').textContent = p.categoria;
+      document.getElementById('det-peso').textContent = p.peso;
+      document.getElementById('det-indicado').textContent = p.indicado;
+      document.getElementById('breadcrumb-nome').textContent = p.nome;
+    }
+
+    // CARRINHO
+    function addCart() {
+      if (!p) return;
+      var t = document.getElementById('toast');
+      t.textContent = 'Adicionado ao carrinho: ' + p.nome;
+      t.style.display = 'block';
+      setTimeout(function() { t.style.display = 'none'; }, 2500);
+    }
+  </script>
+
+</body>
+</html>
