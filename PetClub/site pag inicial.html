@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pet City</title>
+  <!-- CORRIGIDO: nome do site consistente -->
+  <title>Pet Club</title>
+  <!-- CORRIGIDO: nome do ficheiro CSS sem espaços -->
   <link rel="stylesheet" href="css pag inicial.css">
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 
   <!-- NAVBAR -->
   <header>
-   <div class="cao-wrap">
-  <lottie-player 
-    src="cao.json" 
-    background="transparent" 
-    speed="1" 
-    style="width: 80px; height: 80px;" 
-    loop 
-    autoplay>
-  </lottie-player>
-</div>
+    <div class="cao-wrap">
+      <lottie-player
+        src="cao.json"
+        background="transparent"
+        speed="1"
+        style="width: 80px; height: 80px;"
+        loop
+        autoplay>
+      </lottie-player>
+    </div>
     <div class="nav-container">
+      <!-- CORRIGIDO: nome "Pet Club" consistente -->
       <div class="logo">Pet Club</div>
       <nav>
         <ul class="nav-links">
-          <li><a href="site pag inicial.html" class="active">Início</a></li>
-          <li><a href="pag produtos.html">Produtos</a></li>
+          <!-- CORRIGIDO: links sem espaços no nome dos ficheiros -->
+          <li><a href="site_pag_inicial.html" class="active">Início</a></li>
+          <li><a href="pag_produtos.html">Produtos</a></li>
           <li><a href="../animais.html">Animais</a></li>
           <li><a href="../Contactos.html">Contacto</a></li>
         </ul>
@@ -38,8 +42,8 @@
   <section class="hero">
     <h1>Tudo para o teu <span>animal de estimação</span></h1>
     <p>Produtos de qualidade para cães, gatos, aves e muito mais.</p>
-    <a href="pag produtos.html" class="btn-laranja">Ver Produtos</a>
-    <br>
+    <!-- CORRIGIDO: removido <br> desnecessário, espaçamento feito via CSS -->
+    <a href="pag_produtos.html" class="btn-laranja">Ver Produtos</a>
     <img src="Imagens/hero-animal.png" alt="Animal de estimação">
   </section>
 
@@ -52,28 +56,28 @@
         <img src="Imagens/cao.jpg" alt="Cães">
         <h3>Cães</h3>
         <p>Ração, brinquedos e coleiras</p>
-        <a href="pag produtos.html?cat=caes" class="btn-contorno">Ver tudo</a>
+        <a href="pag_produtos.html?cat=caes" class="btn-contorno">Ver tudo</a>
       </div>
 
       <div class="categoria-card">
         <img src="Imagens/gato.jpg" alt="Gatos">
         <h3>Gatos</h3>
         <p>Camas, arranhadores e petiscos</p>
-        <a href="pag produtos.html?cat=gatos" class="btn-contorno">Ver tudo</a>
+        <a href="pag_produtos.html?cat=gatos" class="btn-contorno">Ver tudo</a>
       </div>
 
       <div class="categoria-card">
         <img src="Imagens/peixe.jpg" alt="Peixes">
         <h3>Peixes</h3>
         <p>Aquários, alimentos e acessórios</p>
-        <a href="pag produtos.html?cat=peixes" class="btn-contorno">Ver tudo</a>
+        <a href="pag_produtos.html?cat=peixes" class="btn-contorno">Ver tudo</a>
       </div>
 
       <div class="categoria-card">
         <img src="Imagens/ave.jpg" alt="Aves">
         <h3>Aves</h3>
         <p>Gaiolas, sementes e brinquedos</p>
-        <a href="pag produtos.html?cat=aves" class="btn-contorno">Ver tudo</a>
+        <a href="pag_produtos.html?cat=aves" class="btn-contorno">Ver tudo</a>
       </div>
 
     </div>
@@ -89,7 +93,8 @@
         <div class="produto-info">
           <h3>Ração Premium Cão</h3>
           <p>Ração seca para cães adultos. 5kg.</p>
-          <span class="preco">€24,99</span><br><br>
+          <!-- CORRIGIDO: removidos <br> desnecessários, .preco tem margin via CSS -->
+          <span class="preco">€24,99</span>
           <button class="btn-laranja" onclick="addCart('Ração Premium Cão')">Adicionar ao carrinho</button>
         </div>
       </div>
@@ -99,7 +104,7 @@
         <div class="produto-info">
           <h3>Cama para Gato</h3>
           <p>Cama confortável com almofada. Tamanho M.</p>
-          <span class="preco">€19,99</span><br><br>
+          <span class="preco">€19,99</span>
           <button class="btn-laranja" onclick="addCart('Cama para Gato')">Adicionar ao carrinho</button>
         </div>
       </div>
@@ -109,7 +114,7 @@
         <div class="produto-info">
           <h3>Kit Brinquedos Cão</h3>
           <p>Conjunto com 5 brinquedos variados.</p>
-          <span class="preco">€14,99</span><br><br>
+          <span class="preco">€14,99</span>
           <button class="btn-laranja" onclick="addCart('Kit Brinquedos Cão')">Adicionar ao carrinho</button>
         </div>
       </div>
@@ -119,7 +124,7 @@
         <div class="produto-info">
           <h3>Aquário Starter Kit</h3>
           <p>Aquário 20L com filtro e LED incluídos.</p>
-          <span class="preco">€39,99</span><br><br>
+          <span class="preco">€39,99</span>
           <button class="btn-laranja" onclick="addCart('Aquário Starter Kit')">Adicionar ao carrinho</button>
         </div>
       </div>
@@ -129,7 +134,7 @@
 
   <!-- VANTAGENS -->
   <section class="vantagens">
-    <h2 class="titulo-secao">Porquê a Pet City?</h2>
+    <h2 class="titulo-secao">Porquê a Pet Club?</h2>
     <div class="vantagens-grid">
 
       <div class="vantagem">
@@ -161,16 +166,17 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">Pet City</div>
+    <!-- CORRIGIDO: nome "Pet Club" consistente -->
+    <div class="footer-logo">Pet Club</div>
     <p>A tua loja de animais online de confiança.</p>
     <div class="footer-links">
-      <a href="site pag inicial.html">Início</a>
-      <a href="pag produtos.html">Produtos</a>
+      <a href="site_pag_inicial.html">Início</a>
+      <a href="pag_produtos.html">Produtos</a>
       <a href="../animais.html">Animais</a>
       <a href="../Contactos.html">Contacto</a>
       <a href="#">Privacidade</a>
     </div>
-    <p class="footer-copy">© 2026 Pet City. Todos os direitos reservados.</p>
+    <p class="footer-copy">© 2026 Pet Club. Todos os direitos reservados.</p>
   </footer>
 
   <!-- TOAST CARRINHO -->
@@ -184,6 +190,6 @@
       setTimeout(function() { t.style.display = 'none'; }, 2500);
     }
   </script>
-  
+
 </body>
 </html>

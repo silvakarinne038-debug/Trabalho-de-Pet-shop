@@ -1,4 +1,3 @@
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,16 +6,19 @@ body {
   color: #333333;
 }
 
-
 a {
   text-decoration: none;
   color: #333333;
 }
 
+/* ---- HEADER (unificado, sem duplicado) ---- */
 header {
   background-color: #ffffff;
   border-bottom: 2px solid #ff7b25;
   padding: 15px 30px;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
 }
 
 .nav-container {
@@ -48,6 +50,21 @@ header {
   color: #ff7b25;
 }
 
+/* ---- ANIMAÇÃO CÃO ---- */
+.cao-wrap {
+  position: absolute;
+  bottom: -25px;
+  left: -100px;
+  animation: correr 8s linear infinite;
+  transform: scaleX(-1);
+  z-index: 50;
+}
+
+@keyframes correr {
+  0%   { left: -100px; }
+  100% { left: 110%; }
+}
+
 /* ---- HERO ---- */
 .hero {
   background-color: #fff3e8;
@@ -70,12 +87,14 @@ header {
   margin-bottom: 25px;
 }
 
+/* CORRIGIDO: adicionado display:block para margin:auto funcionar */
 .hero img {
   width: 300px;
+  display: block;
   margin: 20px auto 0;
 }
 
-
+/* ---- BOTÕES ---- */
 .btn-laranja {
   background-color: #ff7b25;
   color: white;
@@ -107,14 +126,14 @@ header {
   color: white;
 }
 
-
+/* ---- TÍTULO DE SECÇÃO ---- */
 .titulo-secao {
   text-align: center;
   font-size: 28px;
   margin: 40px 0 20px;
 }
 
-
+/* ---- CATEGORIAS ---- */
 .categorias {
   padding: 20px 30px;
 }
@@ -150,7 +169,7 @@ header {
   margin-bottom: 12px;
 }
 
-
+/* ---- PRODUTOS ---- */
 .produtos {
   padding: 20px 30px;
 }
@@ -190,6 +209,7 @@ header {
 .produto-info p {
   font-size: 13px;
   color: #666666;
+  /* CORRIGIDO: espaçamento feito via CSS em vez de <br> */
   margin-bottom: 10px;
 }
 
@@ -197,6 +217,9 @@ header {
   font-size: 18px;
   font-weight: bold;
   color: #ff7b25;
+  display: block;
+  /* CORRIGIDO: margem em vez de <br> */
+  margin-bottom: 12px;
 }
 
 /* ---- VANTAGENS ---- */
@@ -269,28 +292,4 @@ footer {
 .footer-copy {
   color: #888888;
   font-size: 12px;
-
-}
-
-header {
-  background-color: #ffffff;
-  border-bottom: 2px solid #ff7b25;
-  padding: 15px 30px;
-  position: relative;
-  overflow: hidden;
-  z-index: 100;
-}
-
-.cao-wrap {
-  position: absolute;
-  bottom: -25px;
-  left: -100px;
-  animation: correr 8s linear infinite;
-  transform: scaleX(-1);
-  z-index: 50;
-}
-
-@keyframes correr {
-  0%   { left: -100px; }
-  100% { left: 110%; }
 }

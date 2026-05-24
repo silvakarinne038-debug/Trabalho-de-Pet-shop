@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produtos | Pet Club</title>
   <link rel="stylesheet" href="pag produtos.css">
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 
   <header>
     <div class="Ave-wrap">
-  <lottie-player 
-    src="Ave.json" 
-    background="transparent" 
-    speed="1" 
-    style="width: 80px; height: 80px;" 
-    loop 
-    autoplay>
-  </lottie-player>
-</div>
+      <lottie-player
+        src="ave.json"
+        background="transparent"
+        speed="1"
+        style="width: 60px; height: 60px;"
+        loop
+        autoplay>
+      </lottie-player>
+    </div>
     <div class="nav-container">
       <div class="logo"><a href="site pag inicial.html" style="color:#ff7b25;text-decoration:none;">Pet Club</a></div>
       <nav>
         <ul class="nav-links">
           <li><a href="site pag inicial.html">Início</a></li>
           <li><a href="pag produtos.html" class="active">Produtos</a></li>
-          <li><a href="../animais.html">Animais</a></li>
-          <li><a href="../Contactos.html">Contacto</a></li>
+          <li><a href="animais.html">Animais</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -157,4 +157,43 @@
         </div>
       </div>
 
-      
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Pet Club</div>
+    <p>A tua loja de animais online de confiança.</p>
+    <div class="footer-links">
+      <a href="site pag inicial.html">Início</a>
+      <a href="pag produtos.html">Produtos</a>
+      <a href="animais.html">Animais</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <p class="footer-copy">© 2026 Pet Club. Todos os direitos reservados.</p>
+  </footer>
+
+  <div id="toast" style="display:none;position:fixed;bottom:30px;right:30px;background:#ff7b25;color:white;padding:14px 24px;border-radius:30px;font-weight:bold;font-size:15px;box-shadow:0 4px 20px rgba(0,0,0,.2);z-index:999;"></div>
+
+  <script>
+    function filtrar(cat, btn) {
+      document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.produto-card').forEach(function(card) {
+        if (cat === 'todos' || card.getAttribute('data-cat') === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function addCart(nome) {
+      var t = document.getElementById('toast');
+      t.textContent = 'Adicionado ao carrinho: ' + nome;
+      t.style.display = 'block';
+      setTimeout(function() { t.style.display = 'none'; }, 2500);
+    }
+  </script>
+
+</body>
+</html>
