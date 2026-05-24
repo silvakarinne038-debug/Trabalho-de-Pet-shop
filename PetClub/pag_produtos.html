@@ -57,7 +57,7 @@
           <h3>Ração Premium Cão</h3>
           <p>Ração seca para cães adultos. 5kg.</p>
           <span class="preco">€24,99</span>
-          <button class="btn-carrinho" onclick="addCart('Ração Premium Cão')">Adicionar ao carrinho</button>
+          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=racao-cao'">Ver produto</button>
         </div>
       </div>
 
@@ -69,7 +69,7 @@
           <h3>Ração Gato Adulto</h3>
           <p>Ração húmida para gatos. Pack 12 latas.</p>
           <span class="preco">€18,99</span>
-          <button class="btn-carrinho" onclick="addCart('Ração Gato Adulto')">Adicionar ao carrinho</button>
+          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=racao-gato'">Ver produto</button>
         </div>
       </div>
 
@@ -81,7 +81,7 @@
           <h3>Kit Brinquedos Cão</h3>
           <p>Conjunto com 5 brinquedos variados.</p>
           <span class="preco">€14,99</span>
-          <button class="btn-carrinho" onclick="addCart('Kit Brinquedos Cão')">Adicionar ao carrinho</button>
+          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=brinquedos-cao'">Ver produto</button>
         </div>
       </div>
 
@@ -93,7 +93,7 @@
           <h3>Cama para Gato</h3>
           <p>Cama confortável com almofada. Tamanho M.</p>
           <span class="preco">€19,99</span>
-          <button class="btn-carrinho" onclick="addCart('Cama para Gato')">Adicionar ao carrinho</button>
+          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=cama-gato'">Ver produto</button>
         </div>
       </div>
 
@@ -105,7 +105,7 @@
           <h3>Aquário Starter Kit</h3>
           <p>Aquário 20L com filtro e LED.</p>
           <span class="preco">€39,99</span>
-          <button class="btn-carrinho" onclick="addCart('Aquário Starter Kit')">Adicionar ao carrinho</button>
+          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=aquario'">Ver produto</button>
         </div>
       </div>
 
@@ -117,7 +117,7 @@
           <h3>Coleira Refletora</h3>
           <p>Coleira LED para passeios noturnos.</p>
           <span class="preco">€12,99</span>
-          <button class="btn-carrinho" onclick="addCart('Coleira Refletora')">Adicionar ao carrinho</button>
+          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=coleira'">Ver produto</button>
         </div>
       </div>
 
@@ -129,7 +129,7 @@
           <h3>Gaiola Compacta</h3>
           <p>Gaiola para pássaros pequenos.</p>
           <span class="preco">€29,99</span>
-          <button class="btn-carrinho" onclick="addCart('Gaiola Compacta')">Adicionar ao carrinho</button>
+          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=gaiola'">Ver produto</button>
         </div>
       </div>
 
@@ -141,7 +141,7 @@
           <h3>Alimento Peixes</h3>
           <p>Flocos nutritivos para peixes tropicais. 200g.</p>
           <span class="preco">€7,99</span>
-          <button class="btn-carrinho" onclick="addCart('Alimento Peixes')">Adicionar ao carrinho</button>
+          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=alimento-peixe'">Ver produto</button>
         </div>
       </div>
 
@@ -153,7 +153,7 @@
           <h3>Sementes Mistura</h3>
           <p>Mistura de sementes para aves. 1kg.</p>
           <span class="preco">€9,99</span>
-          <button class="btn-carrinho" onclick="addCart('Sementes Mistura')">Adicionar ao carrinho</button>
+          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=sementes'">Ver produto</button>
         </div>
       </div>
 
@@ -165,9 +165,9 @@
     <p>A tua loja de animais online de confiança.</p>
     <div class="footer-links">
       <a href="site pag inicial.html">Início</a>
-      <a href="pag produtos.html">Produtos</a>
+      <a href="pag_produtos.html">Produtos</a>
       <a href="animais.html">Animais</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="Contactos.html">Contacto</a>
     </div>
     <p class="footer-copy">© 2026 Pet Club. Todos os direitos reservados.</p>
   </footer>
@@ -185,13 +185,6 @@
           card.style.display = 'none';
         }
       });
-    }
-
-    function addCart(nome) {
-      var t = document.getElementById('toast');
-      t.textContent = 'Adicionado ao carrinho: ' + nome;
-      t.style.display = 'block';
-      setTimeout(function() { t.style.display = 'none'; }, 2500);
     }
   </script>
 
