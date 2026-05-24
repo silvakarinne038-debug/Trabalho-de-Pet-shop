@@ -3,98 +3,206 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PetClub - Contacto</title>
+  <title>Contacto | Pet Club</title>
   <link rel="stylesheet" href="contactos.css">
+  <link rel="stylesheet" href="carrinho.css">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
+  <!-- NAVBAR -->
   <header>
     <div class="nav-container">
-      <div class="logo">🐾 Pet Club</div>
+      <div class="logo"><a href="site pag inicial.html" style="color:#ff7b25;text-decoration:none;">Pet Club</a></div>
       <nav>
         <ul class="nav-links">
           <li><a href="site pag inicial.html">Início</a></li>
           <li><a href="pag_produtos.html">Produtos</a></li>
           <li><a href="animais.html">Animais</a></li>
-          <li><a href="Contactos.html">Contacto</a></li>
+          <li><a href="quem_somos.html">Quem Somos</a></li>
+          <li><a href="Contactos.html" class="active">Contacto</a></li>
         </ul>
       </nav>
+      <div class="carrinho-icon" onclick="abrirCarrinho()">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6" stroke="white" stroke-width="2"/>
+          <path d="M16 10a4 4 0 01-8 0" fill="none" stroke="white" stroke-width="2"/>
+        </svg>
+        <span id="carrinho-badge">0</span>
+      </div>
     </div>
   </header>
 
-  <section class="hero">
-    <h1>Fale Conosco</h1>
-    <p>Estamos disponíveis para te ajudar com informações, encomendas e apoio ao cliente.</p>
-  </section>
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>Fala <span>Connosco</span></h1>
+    <p>Estamos sempre disponíveis para te ajudar</p>
+  </div>
 
-  <section class="contacto">
-    <h2 class="titulo-secao">Contacto</h2>
-    <div class="produtos-grid">
+  <div class="page-content">
 
-      <div class="produto-card">
-        <div class="produto-info">
-          <h3>Informações de contacto</h3>
-          <p><strong>Email:</strong> contacto@petclub.pt</p>
-          <p><strong>Telefone:</strong> +351 000 000 000</p>
-          <p><strong>Morada:</strong> Lisboa, Portugal</p>
-          <p><strong>Horário:</strong> Segunda a Sexta, 09:00 - 18:00</p>
+    <div class="contacto-grid">
+
+      <!-- FORMULÁRIO -->
+      <div class="contacto-form">
+        <h2>Envia-nos uma mensagem</h2>
+        <div class="form-group">
+          <label>Nome</label>
+          <input type="text" id="nome" placeholder="O teu nome">
         </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" placeholder="O teu email">
+        </div>
+        <div class="form-group">
+          <label>Mensagem</label>
+          <textarea id="mensagem" rows="5" placeholder="A tua mensagem..."></textarea>
+        </div>
+        <button class="btn-laranja" onclick="enviarFormulario()">Enviar mensagem</button>
+        <p id="form-ok" style="display:none;color:#ff7b25;font-weight:bold;margin-top:12px;">Mensagem enviada! Entraremos em contacto em breve.</p>
       </div>
 
-      <div class="produto-card">
-        <div class="produto-info">
-          <h3>Mensagem rápida</h3>
-          <form action="#" method="post">
-            <p>
-              <label for="nome">Nome</label><br>
-              <input type="text" id="nome" name="nome" placeholder="Escreve o teu nome">
-            </p>
+      <!-- INFORMAÇÕES -->
+      <div class="contacto-info">
+        <h2>Informações</h2>
 
-            <p>
-              <label for="email">Email</label><br>
-              <input type="email" id="email" name="email" placeholder="Escreve o teu email">
-            </p>
-
-            <p>
-              <label for="assunto">Assunto</label><br>
-              <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem">
-            </p>
-
-            <p>
-              <label for="mensagem">Mensagem</label><br>
-              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreve a tua mensagem"></textarea>
-            </p>
-
-            <button type="submit" class="btn-laranja">Enviar mensagem</button>
-          </form>
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div>
+            <strong>Morada</strong>
+            <p>Escola Secundária Alves Redol<br>Vila Franca de Xira, Portugal</p>
+          </div>
         </div>
-      </div>
 
-      <div class="produto-card">
-        <div class="produto-info">
-          <h3>Redes sociais</h3>
-          <p>Segue-nos para veres novidades, promoções e dicas para os teus animais.</p>
-          <p>Instagram: @petClub</p>
-          <p>Facebook: PetClub</p>
-          <p>TikTok: @petclub</p>
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div>
+            <strong>Telefone</strong>
+            <p>+351 263 000 000</p>
+          </div>
         </div>
-      </div>
 
+        <div class="info-item">
+          <div class="info-icon">✉</div>
+          <div>
+            <strong>Email</strong>
+            <p>geral@petclub.pt</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">🕐</div>
+          <div>
+            <strong>Horário</strong>
+            <p>Segunda a Sexta: 9h - 18h<br>Sábado: 10h - 16h</p>
+          </div>
+        </div>
+
+        <div class="redes-links">
+  <a href="https://www.instagram.com/lucassantossantos5/" target="_blank">Instagram</a>
+  <a href="https://www.facebook.com/lucassantos.santos.79" target="_blank">Facebook</a>
+</div>
+        </div>
+
+      </div>
     </div>
-  </section>
+  </div>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">🐾 Pet Club</div>
+    <div class="footer-logo">Pet Club</div>
     <p>A tua loja de animais online de confiança.</p>
     <div class="footer-links">
-      <a href="PetClub/site pag inicial.html">Início</a>
-      <a href="PetClub/pag produtos.html">Produtos</a>
+      <a href="site pag inicial.html">Início</a>
+      <a href="pag_produtos.html">Produtos</a>
       <a href="animais.html">Animais</a>
+      <a href="quem_somos.html">Quem Somos</a>
       <a href="Contactos.html">Contacto</a>
-      <a href="#">Privacidade</a>
     </div>
     <p class="footer-copy">© 2026 Pet Club. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- PAINEL CARRINHO -->
+  <div id="carrinho-overlay" onclick="fecharCarrinho()"></div>
+  <div id="carrinho-painel">
+    <div class="carrinho-header">
+      <h3>O teu carrinho</h3>
+      <button class="carrinho-fechar" onclick="fecharCarrinho()">x</button>
+    </div>
+    <div id="carrinho-lista"></div>
+    <div class="carrinho-footer">
+      <div class="carrinho-total-linha">
+        <span>Total</span>
+        <span id="carrinho-total">€0,00</span>
+      </div>
+      <button class="btn-finalizar">Finalizar compra</button>
+    </div>
+  </div>
+
+  <!-- CHAT -->
+  <div id="chat-btn" onclick="abrirChat()">Fala connosco</div>
+
+  <div id="chat-box">
+    <div id="chat-header">
+      <span>Pet Club - Suporte</span>
+      <button onclick="fecharChat()">x</button>
+    </div>
+    <div id="chat-mensagens">
+      <div class="msg-bot">Olá! Como te posso ajudar?</div>
+    </div>
+    <div id="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Escreve aqui..." onkeydown="if(event.key==='Enter') enviarChat()">
+      <button onclick="enviarChat()">Enviar</button>
+    </div>
+  </div>
+
+  <script src="carrinho.js"></script>
+  <script>
+    function enviarFormulario() {
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const mensagem = document.getElementById('mensagem').value;
+      if (!nome || !email || !mensagem) { alert('Por favor preenche todos os campos.'); return; }
+      document.getElementById('form-ok').style.display = 'block';
+      document.getElementById('nome').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('mensagem').value = '';
+    }
+
+    function abrirChat() {
+      document.getElementById('chat-box').style.display = 'flex';
+      document.getElementById('chat-btn').style.display = 'none';
+    }
+
+    function fecharChat() {
+      document.getElementById('chat-box').style.display = 'none';
+      document.getElementById('chat-btn').style.display = 'block';
+    }
+
+    const respostas = [
+      'Obrigado pela tua mensagem! Vamos responder em breve.',
+      'Podes contactar-nos por email em geral@petclub.pt.',
+      'Os nossos produtos estao disponiveis na pagina de Produtos.',
+      'Entregamos em todo Portugal em 24 a 48 horas.',
+      'Para mais informacoes sobre animais visita a nossa pagina de Animais.'
+    ];
+
+    function enviarChat() {
+      const input = document.getElementById('chat-input');
+      const texto = input.value.trim();
+      if (!texto) return;
+      const msgs = document.getElementById('chat-mensagens');
+      msgs.innerHTML += `<div class="msg-user">${texto}</div>`;
+      input.value = '';
+      setTimeout(function() {
+        const r = respostas[Math.floor(Math.random() * respostas.length)];
+        msgs.innerHTML += `<div class="msg-bot">${r}</div>`;
+        msgs.scrollTop = msgs.scrollHeight;
+      }, 800);
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+  </script>
 
 </body>
 </html>

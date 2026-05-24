@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produtos | Pet Club</title>
   <link rel="stylesheet" href="pag_produtos.css">
+  <link rel="stylesheet" href="carrinho.css">
+  <link rel="icon" type="image/png" href="favicon.png">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
@@ -27,9 +29,14 @@
           <li><a href="site pag inicial.html">Início</a></li>
           <li><a href="pag_produtos.html" class="active">Produtos</a></li>
           <li><a href="animais.html">Animais</a></li>
+          <li><a href="quem_somos.html">Quem Somos</a></li>
           <li><a href="Contactos.html">Contacto</a></li>
         </ul>
       </nav>
+      <div class="carrinho-icon" onclick="abrirCarrinho()">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6" stroke="white" stroke-width="2"/><path d="M16 10a4 4 0 01-8 0" fill="none" stroke="white" stroke-width="2"/></svg>
+        <span id="carrinho-badge">0</span>
+      </div>
     </div>
   </header>
 
@@ -57,7 +64,10 @@
           <h3>Ração Premium Cão</h3>
           <p>Ração seca para cães adultos. 5kg.</p>
           <span class="preco">€24,99</span>
-          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=racao-cao'">Ver produto</button>
+          <div style="display:flex;gap:6px;margin-top:10px;">
+            <button class="btn-carrinho" style="flex:1" onclick="window.location='produto_individual.html?id=racao-cao'">Ver produto</button>
+            <button class="btn-carrinho" style="flex:1" onclick="addCart('Ração Premium Cão','€24,99','Imagens/produto-racao-cao.png')">+ Carrinho</button>
+          </div>
         </div>
       </div>
 
@@ -69,7 +79,10 @@
           <h3>Ração Gato Adulto</h3>
           <p>Ração húmida para gatos. Pack 12 latas.</p>
           <span class="preco">€18,99</span>
-          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=racao-gato'">Ver produto</button>
+          <div style="display:flex;gap:6px;margin-top:10px;">
+            <button class="btn-carrinho" style="flex:1" onclick="window.location='produto_individual.html?id=racao-gato'">Ver produto</button>
+            <button class="btn-carrinho" style="flex:1" onclick="addCart('Ração Gato Adulto','€18,99','Imagens/produto-racao-gato.png')">+ Carrinho</button>
+          </div>
         </div>
       </div>
 
@@ -81,7 +94,10 @@
           <h3>Kit Brinquedos Cão</h3>
           <p>Conjunto com 5 brinquedos variados.</p>
           <span class="preco">€14,99</span>
-          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=brinquedos-cao'">Ver produto</button>
+          <div style="display:flex;gap:6px;margin-top:10px;">
+            <button class="btn-carrinho" style="flex:1" onclick="window.location='produto_individual.html?id=brinquedos-cao'">Ver produto</button>
+            <button class="btn-carrinho" style="flex:1" onclick="addCart('Kit Brinquedos Cão','€14,99','Imagens/produto-brinquedos.png')">+ Carrinho</button>
+          </div>
         </div>
       </div>
 
@@ -93,7 +109,10 @@
           <h3>Cama para Gato</h3>
           <p>Cama confortável com almofada. Tamanho M.</p>
           <span class="preco">€19,99</span>
-          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=cama-gato'">Ver produto</button>
+          <div style="display:flex;gap:6px;margin-top:10px;">
+            <button class="btn-carrinho" style="flex:1" onclick="window.location='produto_individual.html?id=cama-gato'">Ver produto</button>
+            <button class="btn-carrinho" style="flex:1" onclick="addCart('Cama para Gato','€19,99','Imagens/produto-cama.png')">+ Carrinho</button>
+          </div>
         </div>
       </div>
 
@@ -105,7 +124,10 @@
           <h3>Aquário Starter Kit</h3>
           <p>Aquário 20L com filtro e LED.</p>
           <span class="preco">€39,99</span>
-          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=aquario'">Ver produto</button>
+          <div style="display:flex;gap:6px;margin-top:10px;">
+            <button class="btn-carrinho" style="flex:1" onclick="window.location='produto_individual.html?id=aquario'">Ver produto</button>
+            <button class="btn-carrinho" style="flex:1" onclick="addCart('Aquário Starter Kit','€39,99','Imagens/produto-aquario.png')">+ Carrinho</button>
+          </div>
         </div>
       </div>
 
@@ -117,7 +139,10 @@
           <h3>Coleira Refletora</h3>
           <p>Coleira LED para passeios noturnos.</p>
           <span class="preco">€12,99</span>
-          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=coleira'">Ver produto</button>
+          <div style="display:flex;gap:6px;margin-top:10px;">
+            <button class="btn-carrinho" style="flex:1" onclick="window.location='produto_individual.html?id=coleira'">Ver produto</button>
+            <button class="btn-carrinho" style="flex:1" onclick="addCart('Coleira Refletora','€12,99','Imagens/produto-coleira.png')">+ Carrinho</button>
+          </div>
         </div>
       </div>
 
@@ -129,7 +154,10 @@
           <h3>Gaiola Compacta</h3>
           <p>Gaiola para pássaros pequenos.</p>
           <span class="preco">€29,99</span>
-          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=gaiola'">Ver produto</button>
+          <div style="display:flex;gap:6px;margin-top:10px;">
+            <button class="btn-carrinho" style="flex:1" onclick="window.location='produto_individual.html?id=gaiola'">Ver produto</button>
+            <button class="btn-carrinho" style="flex:1" onclick="addCart('Gaiola Compacta','€29,99','Imagens/produto-gaiola.png')">+ Carrinho</button>
+          </div>
         </div>
       </div>
 
@@ -141,7 +169,10 @@
           <h3>Alimento Peixes</h3>
           <p>Flocos nutritivos para peixes tropicais. 200g.</p>
           <span class="preco">€7,99</span>
-          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=alimento-peixe'">Ver produto</button>
+          <div style="display:flex;gap:6px;margin-top:10px;">
+            <button class="btn-carrinho" style="flex:1" onclick="window.location='produto_individual.html?id=alimento-peixe'">Ver produto</button>
+            <button class="btn-carrinho" style="flex:1" onclick="addCart('Alimento Peixes','€7,99','Imagens/produto-alimento-peixe.png')">+ Carrinho</button>
+          </div>
         </div>
       </div>
 
@@ -153,7 +184,10 @@
           <h3>Sementes Mistura</h3>
           <p>Mistura de sementes para aves. 1kg.</p>
           <span class="preco">€9,99</span>
-          <button class="btn-carrinho" onclick="window.location='produto_individual.html?id=sementes'">Ver produto</button>
+          <div style="display:flex;gap:6px;margin-top:10px;">
+            <button class="btn-carrinho" style="flex:1" onclick="window.location='produto_individual.html?id=sementes'">Ver produto</button>
+            <button class="btn-carrinho" style="flex:1" onclick="addCart('Sementes Mistura','€9,99','Imagens/produto-sementes.png')">+ Carrinho</button>
+          </div>
         </div>
       </div>
 
@@ -172,8 +206,23 @@
     <p class="footer-copy">© 2026 Pet Club. Todos os direitos reservados.</p>
   </footer>
 
-  <div id="toast" style="display:none;position:fixed;bottom:30px;right:30px;background:#ff7b25;color:white;padding:14px 24px;border-radius:30px;font-weight:bold;font-size:15px;box-shadow:0 4px 20px rgba(0,0,0,.2);z-index:999;"></div>
+  <div id="carrinho-overlay" onclick="fecharCarrinho()"></div>
+  <div id="carrinho-painel">
+    <div class="carrinho-header">
+      <h3>O teu carrinho</h3>
+      <button class="carrinho-fechar" onclick="fecharCarrinho()">x</button>
+    </div>
+    <div id="carrinho-lista"></div>
+    <div class="carrinho-footer">
+      <div class="carrinho-total-linha">
+        <span>Total</span>
+        <span id="carrinho-total">€0,00</span>
+      </div>
+      <button class="btn-finalizar">Finalizar compra</button>
+    </div>
+  </div>
 
+  <script src="carrinho.js"></script>
   <script>
     function filtrar(cat, btn) {
       document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('active'));
