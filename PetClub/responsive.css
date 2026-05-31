@@ -1,0 +1,146 @@
+/* =====================
+   MENU HAMBURGUER
+   ===================== */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ff7b25;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.hamburger.aberto span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+.hamburger.aberto span:nth-child(2) { opacity: 0; }
+.hamburger.aberto span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+/* SEMPRE - nav-container ocupa toda a largura */
+.nav-container {
+  width: 100%;
+}
+
+/* =====================
+   TABLET (max 900px)
+   ===================== */
+@media (max-width: 900px) {
+
+  header {
+    height: auto;
+    padding: 12px 20px;
+    flex-wrap: wrap;
+  }
+
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: 14px; }
+
+  .hero { padding: 40px 20px; }
+  .hero h1 { font-size: 28px; }
+
+  .categorias-grid,
+  .produtos-grid,
+  .vantagens-grid,
+  .animais-grid,
+  .mv-grid {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .categoria-card,
+  .vantagem,
+  .mv-card { width: calc(50% - 16px); }
+
+  .produto-card { width: calc(50% - 16px); }
+  .animal-card { width: calc(50% - 16px); }
+
+  .produto-detalhe,
+  .animal-detalhe { flex-direction: column; gap: 24px; }
+
+  .produto-imagem,
+  .animal-imagem { width: 100%; min-width: unset; }
+
+  .sobre-nos { flex-direction: column; }
+  .sobre-nos-foto { width: 100%; min-width: unset; }
+
+  .contacto-grid { flex-direction: column; }
+  .contacto-info { width: 100%; min-width: unset; }
+
+  .checkout-grid { flex-direction: column; }
+  .resumo-box { width: 100%; min-width: unset; }
+}
+
+/* =====================
+   MOBILE (max 600px)
+   ===================== */
+@media (max-width: 600px) {
+
+  .hamburger { display: flex; }
+
+  nav { width: 100%; display: none; }
+  nav.aberto { display: block; }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 10px 0;
+    font-size: 15px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .hero h1 { font-size: 22px; }
+  .hero p { font-size: 14px; }
+  .hero img { width: 200px; }
+
+  .categorias-grid,
+  .produtos-grid,
+  .vantagens-grid,
+  .animais-grid,
+  .mv-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categoria-card,
+  .produto-card,
+  .vantagem,
+  .animal-card,
+  .mv-card { width: 90%; }
+
+  .titulo-secao,
+  .page-header h1 { font-size: 22px; }
+
+  .footer-links { flex-direction: column; gap: 8px; }
+
+  .produto-detalhe,
+  .animal-detalhe { flex-direction: column; padding: 0 16px; }
+
+  .produto-imagem,
+  .animal-imagem { width: 100%; min-width: unset; height: 260px; }
+
+  .patas-lateral { display: none; }
+
+  #chat-box { width: 90%; right: 5%; bottom: 20px; }
+  #chat-btn { right: 16px; bottom: 16px; font-size: 13px; padding: 10px 16px; }
+
+  #carrinho-painel { width: 100%; right: -100%; }
+  #carrinho-painel.aberto { right: 0; }
+}

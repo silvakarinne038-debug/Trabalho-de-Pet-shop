@@ -6,6 +6,7 @@
   <title>Animal | Pet Club</title>
   <link rel="stylesheet" href="animal_individual.css">
   <link rel="stylesheet" href="carrinho.css">
+  <link rel="stylesheet" href="responsive.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
@@ -23,6 +24,11 @@
           <li><a href="Contactos.html">Contacto</a></li>
         </ul>
       </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div class="carrinho-icon" onclick="abrirCarrinho()">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
@@ -83,6 +89,7 @@
       <a href="site pag inicial.html">Início</a>
       <a href="pag_produtos.html">Produtos</a>
       <a href="animais.html">Animais</a>
+      <a href="quem_somos.html">Quem Somos</a>
       <a href="Contactos.html">Contacto</a>
     </div>
     <p class="footer-copy">© 2026 Pet Club. Todos os direitos reservados.</p>
@@ -101,37 +108,37 @@
         <span>Total</span>
         <span id="carrinho-total">€0,00</span>
       </div>
-      <button class="btn-finalizar">Finalizar compra</button>
+    <button class="btn-finalizar" onclick="window.location='finalizar_compra.html'">Finalizar compra</button>
     </div>
   </div>
 
   <script src="carrinho.js"></script>
   <script>
     const animais = {
-      'golden-retriever':        { nome: 'Golden Retriever',         especie: 'Cão',     desc: 'Cão muito amigável, inteligente e carinhoso. Ideal para famílias e crianças.',            idade: '2 anos',   preco: '€250,00', img: 'Imagens/Animais foto/cachorro1.png' },
-      'golden-retriever-dourado':{ nome: 'Golden Retriever Dourado', especie: 'Cão',     desc: 'Filhote brincalhão e cheio de energia. Gosta muito de companhia e longas caminhadas.',    idade: '1 ano',    preco: '€320,00', img: 'Imagens/Animais foto/cachorro2.png' },
-      'labrador-branco':         { nome: 'Labrador Branco',          especie: 'Cão',     desc: 'Cão nobre, calmo e muito leal. Ótimo companheiro para toda a família.',                   idade: '18 meses', preco: '€280,00', img: 'Imagens/Animais foto/cachorro3.png' },
-      'poodle-marrom':           { nome: 'Poodle Marrom',            especie: 'Cão',     desc: 'Cão inteligente com pelagem encaracolada. Hipoalergénico e excelente para apartamentos.', idade: '2 anos',   preco: '€270,00', img: 'Imagens/Animais foto/cachorro4.png' },
-      'terrier-pequeno':         { nome: 'Terrier Pequeno',          especie: 'Cão',     desc: 'Cão pequeno, corajoso e brincalhão. Perfeito para espaços reduzidos.',                    idade: '8 meses',  preco: '€200,00', img: 'Imagens/Animais foto/cachorro5.png' },
-      'gato-tabby-cinzento':     { nome: 'Gato Tabby Cinzento',      especie: 'Gato',    desc: 'Gato elegante e tranquilo com pelagem cinzenta listrada. Muito carinhoso.',               idade: '1 ano',    preco: '€180,00', img: 'Imagens/Animais foto/gato1.png' },
-      'gato-branco-cinzento':    { nome: 'Gato Branco e Cinzento',   especie: 'Gato',    desc: 'Gato muito comunicativo e inteligente. Excelente companheiro para apartamentos.',         idade: '8 meses',  preco: '€220,00', img: 'Imagens/Animais foto/gato2.png' },
-      'gato-preto-branco':       { nome: 'Gato Preto e Branco',      especie: 'Gato',    desc: 'Gato independente com belíssima pelagem. Muito ativo e curioso, adora explorar.',         idade: '1 ano',    preco: '€200,00', img: 'Imagens/Animais foto/gato3.png' },
-      'gato-tabby-classico':     { nome: 'Gato Tabby Clássico',      especie: 'Gato',    desc: 'Gato muito elegante e sereno. Pelagem macia e bem cuidada. Adora receber mimos.',         idade: '2 anos',   preco: '€190,00', img: 'Imagens/Animais foto/gato4.png' },
-      'gato-cinzento':           { nome: 'Gato Cinzento',            especie: 'Gato',    desc: 'Gato tranquilo e afetuoso com olhos expressivos. Ideal para famílias com crianças.',      idade: '6 meses',  preco: '€170,00', img: 'Imagens/Animais foto/gato5.png' },
-      'coelho-cinzento':         { nome: 'Coelho Cinzento',          especie: 'Coelho',  desc: 'Coelho macio e tranquilo com pelagem cinzenta. Muito dócil e fácil de domesticar.',       idade: '8 meses',  preco: '€45,00',  img: 'Imagens/Animais foto/coelho2.png' },
-      'coelho-branco':           { nome: 'Coelho Branco',            especie: 'Coelho',  desc: 'Coelho puro branco muito fofo e carinhoso. Sociável e brincalhão.',                       idade: '6 meses',  preco: '€50,00',  img: 'Imagens/Animais foto/coelho3.png' },
-      'coelho-bicolor':          { nome: 'Coelho Bicolor',           especie: 'Coelho',  desc: 'Coelho bicolor muito bonito e dócil. Muito calmo e ideal para ambientes tranquilos.',     idade: '10 meses', preco: '€55,00',  img: 'Imagens/Animais foto/coelho1.png' },
-      'calopsita':               { nome: 'Calopsita',                especie: 'Pássaro', desc: 'Ave sociável e divertida com crista elegante. Aprende sons e gosta de interação.',        idade: '1 ano',    preco: '€120,00', img: 'Imagens/Animais foto/passaro5.png' },
-      'periquito-cinzento':      { nome: 'Periquito Cinzento',       especie: 'Pássaro', desc: 'Pequeno pássaro muito alegre e ativo. Fácil de cuidar e ideal para iniciantes.',          idade: '6 meses',  preco: '€40,00',  img: 'Imagens/Animais foto/passaro4.png' },
-      'cacatua':                 { nome: 'Cacatua',                  especie: 'Pássaro', desc: 'Cacatua colorida e muito social. Inteligente e capaz de aprender palavras.',              idade: '18 meses', preco: '€130,00', img: 'Imagens/Animais foto/passaro1.png' },
-      'papagaio-verde':          { nome: 'Papagaio Verde',           especie: 'Pássaro', desc: 'Papagaio inteligente e comunicativo. Excelente imitador de sons e palavras.',             idade: '2 anos',   preco: '€250,00', img: 'Imagens/Animais foto/passaro3.png' },
-      'periquito-azul':          { nome: 'Periquito Azul',           especie: 'Pássaro', desc: 'Periquito pequeno muito vivo e brincalhão. Cores bonitas e alegres.',                     idade: '4 meses',  preco: '€35,00',  img: 'Imagens/Animais foto/passaro2.png' },
-      'peixe-beta':              { nome: 'Peixe Beta',               especie: 'Peixe',   desc: 'Peixe colorido e elegante muito popular. Ideal para aquários pequenos.',                  idade: '6 meses',  preco: '€12,00',  img: 'Imagens/Animais foto/peixe2.png' },
-      'peixe-palhaco':           { nome: 'Peixe Palhaço',            especie: 'Peixe',   desc: 'Peixe colorido e elegante. Calmo e fácil de cuidar.',                                     idade: '6 meses',  preco: '€12,00',  img: 'Imagens/Animais foto/peixe3.png' },
-      'peixe-dourado':           { nome: 'Peixe Dourado',            especie: 'Peixe',   desc: 'Peixe clássico e muito popular. Ideal para aquários de água fria.',                       idade: '6 meses',  preco: '€12,00',  img: 'Imagens/Animais foto/peixe1.png' },
-      'hamster':                 { nome: 'Hamster',                  especie: 'Roedor',  desc: 'Pequeno roedor muito fofo com pelagem macia e delicada.',                                 idade: '4 meses',  preco: '€90,00',  img: 'Imagens/Animais foto/Hamister2.png' },
-      'chinchila':               { nome: 'Chinchila',                especie: 'Roedor',  desc: 'Pequeno roedor muito fofo com pelagem macia. Tranquilo e curioso.',                       idade: '8 meses',  preco: '€80,00',  img: 'Imagens/Animais foto/chinchila.png' },
-      'porquinho-india':         { nome: 'Porquinho da Índia',       especie: 'Roedor',  desc: 'Pequeno roedor muito fofo com pelagem macia e muito dócil.',                              idade: '8 meses',  preco: '€80,00',  img: 'Imagens/Animais foto/porquinho da india.png' }
+      'golden-retriever':         { nome: 'Golden Retriever',         especie: 'Cão',     desc: 'Cão muito amigável, inteligente e carinhoso. Ideal para famílias e crianças.',            idade: '2 anos',   preco: '€250,00', img: 'Imagens/Animais foto/cachorro1.png' },
+      'golden-retriever-dourado': { nome: 'Golden Retriever Dourado', especie: 'Cão',     desc: 'Filhote brincalhão e cheio de energia. Gosta muito de companhia e longas caminhadas.',    idade: '1 ano',    preco: '€320,00', img: 'Imagens/Animais foto/cachorro2.png' },
+      'labrador-branco':          { nome: 'Labrador Branco',          especie: 'Cão',     desc: 'Cão nobre, calmo e muito leal. Ótimo companheiro para toda a família.',                   idade: '18 meses', preco: '€280,00', img: 'Imagens/Animais foto/cachorro3.png' },
+      'poodle-marrom':            { nome: 'Poodle Marrom',            especie: 'Cão',     desc: 'Cão inteligente com pelagem encaracolada. Hipoalergénico e excelente para apartamentos.', idade: '2 anos',   preco: '€270,00', img: 'Imagens/Animais foto/cachorro4.png' },
+      'terrier-pequeno':          { nome: 'Terrier Pequeno',          especie: 'Cão',     desc: 'Cão pequeno, corajoso e brincalhão. Perfeito para espaços reduzidos.',                    idade: '8 meses',  preco: '€200,00', img: 'Imagens/Animais foto/cachorro5.png' },
+      'gato-tabby-cinzento':      { nome: 'Gato Tabby Cinzento',      especie: 'Gato',    desc: 'Gato elegante e tranquilo com pelagem cinzenta listrada. Muito carinhoso.',               idade: '1 ano',    preco: '€180,00', img: 'Imagens/Animais foto/gato1.png' },
+      'gato-branco-cinzento':     { nome: 'Gato Branco e Cinzento',   especie: 'Gato',    desc: 'Gato muito comunicativo e inteligente. Excelente companheiro para apartamentos.',         idade: '8 meses',  preco: '€220,00', img: 'Imagens/Animais foto/gato2.png' },
+      'gato-preto-branco':        { nome: 'Gato Preto e Branco',      especie: 'Gato',    desc: 'Gato independente com belíssima pelagem. Muito ativo e curioso, adora explorar.',         idade: '1 ano',    preco: '€200,00', img: 'Imagens/Animais foto/gato3.png' },
+      'gato-tabby-classico':      { nome: 'Gato Tabby Clássico',      especie: 'Gato',    desc: 'Gato muito elegante e sereno. Pelagem macia e bem cuidada. Adora receber mimos.',         idade: '2 anos',   preco: '€190,00', img: 'Imagens/Animais foto/gato4.png' },
+      'gato-cinzento':            { nome: 'Gato Cinzento',            especie: 'Gato',    desc: 'Gato tranquilo e afetuoso com olhos expressivos. Ideal para famílias com crianças.',      idade: '6 meses',  preco: '€170,00', img: 'Imagens/Animais foto/gato5.png' },
+      'coelho-cinzento':          { nome: 'Coelho Cinzento',          especie: 'Coelho',  desc: 'Coelho macio e tranquilo com pelagem cinzenta. Muito dócil e fácil de domesticar.',       idade: '8 meses',  preco: '€45,00',  img: 'Imagens/Animais foto/coelho2.png' },
+      'coelho-branco':            { nome: 'Coelho Branco',            especie: 'Coelho',  desc: 'Coelho puro branco muito fofo e carinhoso. Sociável e brincalhão.',                       idade: '6 meses',  preco: '€50,00',  img: 'Imagens/Animais foto/coelho3.png' },
+      'coelho-bicolor':           { nome: 'Coelho Bicolor',           especie: 'Coelho',  desc: 'Coelho bicolor muito bonito e dócil. Muito calmo e ideal para ambientes tranquilos.',     idade: '10 meses', preco: '€55,00',  img: 'Imagens/Animais foto/coelho1.png' },
+      'calopsita':                { nome: 'Calopsita',                especie: 'Pássaro', desc: 'Ave sociável e divertida com crista elegante. Aprende sons e gosta de interação.',        idade: '1 ano',    preco: '€120,00', img: 'Imagens/Animais foto/passaro5.png' },
+      'periquito-cinzento':       { nome: 'Periquito Cinzento',       especie: 'Pássaro', desc: 'Pequeno pássaro muito alegre e ativo. Fácil de cuidar e ideal para iniciantes.',          idade: '6 meses',  preco: '€40,00',  img: 'Imagens/Animais foto/passaro4.png' },
+      'cacatua':                  { nome: 'Cacatua',                  especie: 'Pássaro', desc: 'Cacatua colorida e muito social. Inteligente e capaz de aprender palavras.',              idade: '18 meses', preco: '€130,00', img: 'Imagens/Animais foto/passaro1.png' },
+      'papagaio-verde':           { nome: 'Papagaio Verde',           especie: 'Pássaro', desc: 'Papagaio inteligente e comunicativo. Excelente imitador de sons e palavras.',             idade: '2 anos',   preco: '€250,00', img: 'Imagens/Animais foto/passaro3.png' },
+      'periquito-azul':           { nome: 'Periquito Azul',           especie: 'Pássaro', desc: 'Periquito pequeno muito vivo e brincalhão. Cores bonitas e alegres.',                     idade: '4 meses',  preco: '€35,00',  img: 'Imagens/Animais foto/passaro2.png' },
+      'peixe-beta':               { nome: 'Peixe Beta',               especie: 'Peixe',   desc: 'Peixe colorido e elegante muito popular. Ideal para aquários pequenos.',                  idade: '6 meses',  preco: '€12,00',  img: 'Imagens/Animais foto/peixe2.png' },
+      'peixe-palhaco':            { nome: 'Peixe Palhaço',            especie: 'Peixe',   desc: 'Peixe colorido e elegante. Calmo e fácil de cuidar.',                                     idade: '6 meses',  preco: '€12,00',  img: 'Imagens/Animais foto/peixe3.png' },
+      'peixe-dourado':            { nome: 'Peixe Dourado',            especie: 'Peixe',   desc: 'Peixe clássico e muito popular. Ideal para aquários de água fria.',                       idade: '6 meses',  preco: '€12,00',  img: 'Imagens/Animais foto/peixe1.png' },
+      'hamster':                  { nome: 'Hamster',                  especie: 'Roedor',  desc: 'Pequeno roedor muito fofo com pelagem macia e delicada.',                                 idade: '4 meses',  preco: '€90,00',  img: 'Imagens/Animais foto/Hamister2.png' },
+      'chinchila':                { nome: 'Chinchila',                especie: 'Roedor',  desc: 'Pequeno roedor muito fofo com pelagem macia. Tranquilo e curioso.',                       idade: '8 meses',  preco: '€80,00',  img: 'Imagens/Animais foto/chinchila.png' },
+      'porquinho-india':          { nome: 'Porquinho da Índia',       especie: 'Roedor',  desc: 'Pequeno roedor muito fofo com pelagem macia e muito dócil.',                              idade: '8 meses',  preco: '€80,00',  img: 'Imagens/Animais foto/porquinho da india.png' }
     };
 
     const params = new URLSearchParams(window.location.search);
@@ -154,6 +161,11 @@
     function comprar() {
       if (!a) return;
       addCart(a.nome, a.preco, a.img);
+    }
+
+    function toggleMenu() {
+      document.querySelector('nav').classList.toggle('aberto');
+      document.querySelector('.hamburger').classList.toggle('aberto');
     }
   </script>
 

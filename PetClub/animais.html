@@ -6,6 +6,7 @@
   <title>Pet Club - Animais</title>
   <link rel="stylesheet" href="animais.css">
   <link rel="stylesheet" href="carrinho.css">
+  <link rel="stylesheet" href="responsive.css">
   <link rel="icon" type="image/png" href="favicon.png">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <style>
@@ -40,6 +41,11 @@
           <li><a href="Contactos.html">Contacto</a></li>
         </ul>
       </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div class="carrinho-icon" onclick="abrirCarrinho()">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
@@ -65,6 +71,7 @@
       <a href="site pag inicial.html">Início</a>
       <a href="pag_produtos.html">Produtos</a>
       <a href="animais.html">Animais</a>
+      <a href="quem_somos.html">Quem Somos</a>
       <a href="Contactos.html">Contacto</a>
     </div>
     <p class="footer-copy">© 2026 Pet Club. Todos os direitos reservados.</p>
@@ -83,7 +90,7 @@
         <span>Total</span>
         <span id="carrinho-total">€0,00</span>
       </div>
-      <button class="btn-finalizar">Finalizar compra</button>
+    <button class="btn-finalizar" onclick="window.location='finalizar_compra.html'">Finalizar compra</button>
     </div>
   </div>
 
@@ -93,21 +100,21 @@
       {
         titulo: "Cachorros",
         animais: [
-          { id: 'golden-retriever',         nome: 'Golden Retriever',         img: 'cachorro1.png', desc: 'Cão muito amigável, inteligente e carinhoso. Ideal para famílias e crianças.',            idade: '2 anos',   preco: '€250,00' },
-          { id: 'golden-retriever-dourado',  nome: 'Golden Retriever Dourado', img: 'cachorro2.png', desc: 'Filhote brincalhão e cheio de energia. Gosta muito de companhia e longas caminhadas.',    idade: '1 ano',    preco: '€320,00' },
-          { id: 'labrador-branco',           nome: 'Labrador Branco',          img: 'cachorro3.png', desc: 'Cão nobre, calmo e muito leal. Ótimo companheiro para toda a família.',                   idade: '18 meses', preco: '€280,00' },
-          { id: 'poodle-marrom',             nome: 'Poodle Marrom',            img: 'cachorro4.png', desc: 'Cão inteligente com pelagem encaracolada. Hipoalergénico e excelente para apartamentos.', idade: '2 anos',   preco: '€270,00' },
-          { id: 'terrier-pequeno',           nome: 'Terrier Pequeno',          img: 'cachorro5.png', desc: 'Cão pequeno, corajoso e brincalhão. Perfeito para espaços reduzidos.',                    idade: '8 meses',  preco: '€200,00' }
+          { id: 'golden-retriever',        nome: 'Golden Retriever',         img: 'cachorro1.png', desc: 'Cão muito amigável, inteligente e carinhoso. Ideal para famílias e crianças.',            idade: '2 anos',   preco: '€250,00' },
+          { id: 'golden-retriever-dourado', nome: 'Golden Retriever Dourado', img: 'cachorro2.png', desc: 'Filhote brincalhão e cheio de energia. Gosta muito de companhia e longas caminhadas.',    idade: '1 ano',    preco: '€320,00' },
+          { id: 'labrador-branco',          nome: 'Labrador Branco',          img: 'cachorro3.png', desc: 'Cão nobre, calmo e muito leal. Ótimo companheiro para toda a família.',                   idade: '18 meses', preco: '€280,00' },
+          { id: 'poodle-marrom',            nome: 'Poodle Marrom',            img: 'cachorro4.png', desc: 'Cão inteligente com pelagem encaracolada. Hipoalergénico e excelente para apartamentos.', idade: '2 anos',   preco: '€270,00' },
+          { id: 'terrier-pequeno',          nome: 'Terrier Pequeno',          img: 'cachorro5.png', desc: 'Cão pequeno, corajoso e brincalhão. Perfeito para espaços reduzidos.',                    idade: '8 meses',  preco: '€200,00' }
         ]
       },
       {
         titulo: "Gatos",
         animais: [
-          { id: 'gato-tabby-cinzento',  nome: 'Gato Tabby Cinzento',    img: 'gato1.png', desc: 'Gato elegante e tranquilo com pelagem cinzenta listrada. Muito carinhoso.',         idade: '1 ano',   preco: '€180,00' },
-          { id: 'gato-branco-cinzento', nome: 'Gato Branco e Cinzento', img: 'gato2.png', desc: 'Gato muito comunicativo e inteligente. Excelente companheiro para apartamentos.',   idade: '8 meses', preco: '€220,00' },
-          { id: 'gato-preto-branco',    nome: 'Gato Preto e Branco',    img: 'gato3.png', desc: 'Gato independente com belíssima pelagem. Muito ativo e curioso, adora explorar.',   idade: '1 ano',   preco: '€200,00' },
-          { id: 'gato-tabby-classico',  nome: 'Gato Tabby Clássico',    img: 'gato4.png', desc: 'Gato muito elegante e sereno. Pelagem macia e bem cuidada. Adora receber mimos.',   idade: '2 anos',  preco: '€190,00' },
-          { id: 'gato-cinzento',        nome: 'Gato Cinzento',          img: 'gato5.png', desc: 'Gato tranquilo e afetuoso com olhos expressivos. Ideal para famílias com crianças.',idade: '6 meses', preco: '€170,00' }
+          { id: 'gato-tabby-cinzento',  nome: 'Gato Tabby Cinzento',    img: 'gato1.png', desc: 'Gato elegante e tranquilo com pelagem cinzenta listrada. Muito carinhoso.',          idade: '1 ano',   preco: '€180,00' },
+          { id: 'gato-branco-cinzento', nome: 'Gato Branco e Cinzento', img: 'gato2.png', desc: 'Gato muito comunicativo e inteligente. Excelente companheiro para apartamentos.',    idade: '8 meses', preco: '€220,00' },
+          { id: 'gato-preto-branco',    nome: 'Gato Preto e Branco',    img: 'gato3.png', desc: 'Gato independente com belíssima pelagem. Muito ativo e curioso, adora explorar.',    idade: '1 ano',   preco: '€200,00' },
+          { id: 'gato-tabby-classico',  nome: 'Gato Tabby Clássico',    img: 'gato4.png', desc: 'Gato muito elegante e sereno. Pelagem macia e bem cuidada. Adora receber mimos.',    idade: '2 anos',  preco: '€190,00' },
+          { id: 'gato-cinzento',        nome: 'Gato Cinzento',          img: 'gato5.png', desc: 'Gato tranquilo e afetuoso com olhos expressivos. Ideal para famílias com crianças.', idade: '6 meses', preco: '€170,00' }
         ]
       },
       {
@@ -121,11 +128,11 @@
       {
         titulo: "Pássaros",
         animais: [
-          { id: 'calopsita',          nome: 'Calopsita',          img: 'passaro5.png', desc: 'Ave sociável e divertida com crista elegante. Aprende sons e gosta de interação.',   idade: '1 ano',    preco: '€120,00' },
-          { id: 'periquito-cinzento', nome: 'Periquito Cinzento', img: 'passaro4.png', desc: 'Pequeno pássaro muito alegre e ativo. Fácil de cuidar e ideal para iniciantes.',    idade: '6 meses',  preco: '€40,00'  },
-          { id: 'cacatua',            nome: 'Cacatua',            img: 'passaro1.png', desc: 'Cacatua colorida e muito social. Inteligente e capaz de aprender palavras.',         idade: '18 meses', preco: '€130,00' },
-          { id: 'papagaio-verde',     nome: 'Papagaio Verde',     img: 'passaro3.png', desc: 'Papagaio inteligente e comunicativo. Excelente imitador de sons e palavras.',        idade: '2 anos',   preco: '€250,00' },
-          { id: 'periquito-azul',     nome: 'Periquito Azul',     img: 'passaro2.png', desc: 'Periquito pequeno muito vivo e brincalhão. Cores bonitas e alegres.',               idade: '4 meses',  preco: '€35,00'  }
+          { id: 'calopsita',          nome: 'Calopsita',          img: 'passaro5.png', desc: 'Ave sociável e divertida com crista elegante. Aprende sons e gosta de interação.',  idade: '1 ano',    preco: '€120,00' },
+          { id: 'periquito-cinzento', nome: 'Periquito Cinzento', img: 'passaro4.png', desc: 'Pequeno pássaro muito alegre e ativo. Fácil de cuidar e ideal para iniciantes.',   idade: '6 meses',  preco: '€40,00'  },
+          { id: 'cacatua',            nome: 'Cacatua',            img: 'passaro1.png', desc: 'Cacatua colorida e muito social. Inteligente e capaz de aprender palavras.',        idade: '18 meses', preco: '€130,00' },
+          { id: 'papagaio-verde',     nome: 'Papagaio Verde',     img: 'passaro3.png', desc: 'Papagaio inteligente e comunicativo. Excelente imitador de sons e palavras.',       idade: '2 anos',   preco: '€250,00' },
+          { id: 'periquito-azul',     nome: 'Periquito Azul',     img: 'passaro2.png', desc: 'Periquito pequeno muito vivo e brincalhão. Cores bonitas e alegres.',              idade: '4 meses',  preco: '€35,00'  }
         ]
       },
       {
@@ -171,6 +178,11 @@
           <div class="animais-grid">${cards}</div>
         </section>`;
     });
+
+    function toggleMenu() {
+      document.querySelector('nav').classList.toggle('aberto');
+      document.querySelector('.hamburger').classList.toggle('aberto');
+    }
   </script>
 
 </body>
