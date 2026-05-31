@@ -6,6 +6,7 @@
   <title>Contacto | Pet Club</title>
   <link rel="stylesheet" href="contactos.css">
   <link rel="stylesheet" href="carrinho.css">
+  <link rel="stylesheet" href="responsive.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
@@ -23,6 +24,11 @@
           <li><a href="Contactos.html" class="active">Contacto</a></li>
         </ul>
       </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div class="carrinho-icon" onclick="abrirCarrinho()">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
@@ -41,7 +47,6 @@
   </div>
 
   <div class="page-content">
-
     <div class="contacto-grid">
 
       <!-- FORMULÁRIO -->
@@ -99,10 +104,12 @@
           </div>
         </div>
 
-        <div class="redes-links">
-  <a href="https://www.instagram.com/lucassantossantos5/" target="_blank">Instagram</a>
-  <a href="https://www.facebook.com/lucassantos.santos.79" target="_blank">Facebook</a>
-</div>
+        <div class="redes-sociais">
+          <strong>Redes Sociais</strong>
+          <div class="redes-links">
+            <a href="https://www.instagram.com/lucassantossantos5/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/lucassantos.santos.79" target="_blank">Facebook</a>
+          </div>
         </div>
 
       </div>
@@ -142,7 +149,6 @@
 
   <!-- CHAT -->
   <div id="chat-btn" onclick="abrirChat()">Fala connosco</div>
-
   <div id="chat-box">
     <div id="chat-header">
       <span>Pet Club - Suporte</span>
@@ -201,6 +207,11 @@
         msgs.scrollTop = msgs.scrollHeight;
       }, 800);
       msgs.scrollTop = msgs.scrollHeight;
+    }
+
+    function toggleMenu() {
+      document.querySelector('nav').classList.toggle('aberto');
+      document.querySelector('.hamburger').classList.toggle('aberto');
     }
   </script>
 

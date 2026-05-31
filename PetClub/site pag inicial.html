@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css pag inicial.css">
   <link rel="stylesheet" href="carrinho.css">
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="responsive.css">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
@@ -45,6 +46,12 @@
           <li><a href="Contactos.html">Contacto</a></li>
         </ul>
       </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
       <div class="carrinho-icon" onclick="abrirCarrinho()">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
@@ -196,6 +203,11 @@
   </div>
 
   <script src="carrinho.js"></script>
-
+<script>
+  function toggleMenu() {
+    document.querySelector('nav').classList.toggle('aberto');
+    document.querySelector('.hamburger').classList.toggle('aberto');
+  }
+</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+z<!DOCTYPE html>
 <html lang="pt-PT">
 <head>
   <meta charset="UTF-8">
@@ -6,6 +6,8 @@
   <title>Quem Somos | Pet Club</title>
   <link rel="stylesheet" href="quem_somos.css">
   <link rel="stylesheet" href="carrinho.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
@@ -22,6 +24,11 @@
           <li><a href="Contactos.html">Contacto</a></li>
         </ul>
       </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div class="carrinho-icon" onclick="abrirCarrinho()">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
@@ -58,27 +65,22 @@
     <div class="missao-valores">
       <h2>Missão e Valores</h2>
       <div class="mv-grid">
-
         <div class="mv-card">
           <h3>A nossa Missão</h3>
           <p>Proporcionar aos animais de estimação e aos seus donos a melhor experiência possível, com produtos de qualidade, atendimento personalizado e preços justos.</p>
         </div>
-
         <div class="mv-card">
           <h3>Qualidade</h3>
           <p>Trabalhamos apenas com marcas e fornecedores de confiança, garantindo que todos os nossos produtos são seguros e adequados para os teus animais.</p>
         </div>
-
         <div class="mv-card">
           <h3>Bem-estar Animal</h3>
           <p>Acreditamos que todos os animais merecem ser tratados com amor e respeito. Promovemos a adoção responsável e o cuidado consciente dos animais de estimação.</p>
         </div>
-
         <div class="mv-card">
           <h3>Proximidade</h3>
           <p>Mais do que uma loja, somos uma comunidade. Estamos sempre disponíveis para ajudar, aconselhar e partilhar a paixão pelos animais contigo.</p>
         </div>
-
       </div>
     </div>
 
@@ -127,6 +129,12 @@
   </div>
 
   <script src="carrinho.js"></script>
+  <script>
+    function toggleMenu() {
+      document.querySelector('nav').classList.toggle('aberto');
+      document.querySelector('.hamburger').classList.toggle('aberto');
+    }
+  </script>
 
 </body>
 </html>
