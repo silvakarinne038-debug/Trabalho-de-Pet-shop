@@ -62,12 +62,12 @@ header {
 }
 .produto-card:hover { border-color: #ff7b25; transform: translateY(-3px); }
 .foto-produto {
-  width: 100%; height: 160px;
+  width: 100%; height: 140px;
   background-color: #fff3e8;
   display: flex; align-items: center; justify-content: center;
   overflow: hidden;
 }
-.foto-produto img { width: 100%; height: 100%; object-fit: cover; }
+.foto-produto img { width: 100%; height: 100%; object-fit: contain; }
 .produto-info { padding: 12px; }
 .produto-info h3 { font-size: 15px; margin-bottom: 6px; }
 .produto-info p { font-size: 13px; color: #666666; margin-bottom: 10px; }
