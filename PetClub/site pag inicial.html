@@ -64,7 +64,6 @@
         <span></span>
         <span></span>
       </div>
-      
       <div class="carrinho-icon" onclick="abrirCarrinho()">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
@@ -76,11 +75,29 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO SLIDER -->
   <section class="hero">
-    <h1>Tudo para o teu <span>animal de estimação</span></h1>
-    <p>Produtos de qualidade para cães, gatos, aves e muito mais.</p>
-    <a href="pag_produtos.html" class="btn-laranja">Ver Produtos</a>
+    <div class="slider">
+
+      <div class="slide active">
+        <div class="slide-bg" style="background-image: url('Imagens/animaishero.jpg')"></div>
+        <div class="slide-content">
+          <h1>Tudo para o teu <span>animal de estimação</span></h1>
+          <p>Produtos de qualidade para cães, gatos, aves e muito mais.</p>
+          <a href="pag_produtos.html" class="btn-laranja">Ver Produtos</a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-bg" style="background-image: url('Imagens/hero2.png')"></div>
+        <div class="slide-content">
+          <h1>Bem-vindo à <span>Pet Club</span></h1>
+          <p>A tua loja de animais de confiança em Portugal.</p>
+          <a href="animais.html" class="btn-laranja">Ver Animais</a>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <!-- CATEGORIAS -->
@@ -88,8 +105,7 @@
     <h2 class="titulo-secao">Categorias</h2>
     <div class="categorias-grid">
       <div class="categoria-card">
-        <img src="categorias/cachorro.png" alt="Cães">
-
+        <img src="Imagens/cachorro1.png" alt="Cães">
         <h3>Cães</h3>
         <p>Ração, brinquedos e coleiras</p>
         <a href="pag_produtos.html?cat=caes" class="btn-contorno">Ver tudo</a>
@@ -158,8 +174,6 @@
     </div>
   </section>
 
-
-
   <!-- VANTAGENS -->
   <section class="vantagens">
     <h2 class="titulo-secao">Porquê a Pet Club?</h2>
@@ -214,15 +228,26 @@
         <span>Total</span>
         <span id="carrinho-total">€0,00</span>
       </div>
-     <button class="btn-finalizar" onclick="window.location='finalizar_compra.html'">Finalizar compra</button>
+      <button class="btn-finalizar" onclick="window.location='finalizar_compra.html'">Finalizar compra</button>
+    </div>
   </div>
 
   <script src="carrinho.js"></script>
-<script>
-  function toggleMenu() {
-    document.querySelector('nav').classList.toggle('aberto');
-    document.querySelector('.hamburger').classList.toggle('aberto');
-  }
-</script>
+  <script>
+    function toggleMenu() {
+      document.querySelector('nav').classList.toggle('aberto');
+      document.querySelector('.hamburger').classList.toggle('aberto');
+    }
+
+    // SLIDER
+    const slides = document.querySelectorAll('.slide');
+    let atual = 0;
+    setInterval(function() {
+      slides[atual].classList.remove('active');
+      atual = (atual + 1) % slides.length;
+      slides[atual].classList.add('active');
+    }, 5000);
+  </script>
+
 </body>
 </html>
