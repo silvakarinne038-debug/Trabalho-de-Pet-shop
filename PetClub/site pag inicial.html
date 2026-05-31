@@ -8,6 +8,19 @@
   <link rel="stylesheet" href="carrinho.css">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="responsive.css">
+  <style>
+    .categorias .categoria-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    @media (max-width: 600px) {
+      .categorias .categoria-card img { width: 80px; height: 80px; }
+    }
+  </style>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
@@ -98,19 +111,19 @@
         <a href="pag_produtos.html?cat=caes" class="btn-contorno">Ver tudo</a>
       </div>
       <div class="categoria-card">
-        <img src="Imagens/gato1.png" alt="Gatos">
+        <img src="categorias/gato.png" alt="Gatos">
         <h3>Gatos</h3>
         <p>Camas, arranhadores e petiscos</p>
         <a href="pag_produtos.html?cat=gatos" class="btn-contorno">Ver tudo</a>
       </div>
       <div class="categoria-card">
-        <img src="Imagens/peixe1.png" alt="Peixes">
+        <img src="categorias/peixe.png" alt="Peixes">
         <h3>Peixes</h3>
         <p>Aquários, alimentos e acessórios</p>
         <a href="pag_produtos.html?cat=peixes" class="btn-contorno">Ver tudo</a>
       </div>
       <div class="categoria-card">
-        <img src="Imagens/passaro1.png" alt="Aves">
+        <img src="categorias/passaro.png" alt="Aves">
         <h3>Aves</h3>
         <p>Gaiolas, sementes e brinquedos</p>
         <a href="pag_produtos.html?cat=aves" class="btn-contorno">Ver tudo</a>
@@ -166,7 +179,7 @@
     <h2 class="titulo-secao">Porquê a Pet Club?</h2>
     <div class="vantagens-grid">
       <div class="vantagem">
-        <img src="Imagens/coleira led.png" alt="Entrega Rápida">
+        <img src="imagembaixo/entrega.png" alt="Entrega Rápida">
         <h3>Entrega Rápida</h3>
         <p>Entregamos em 24 a 48 horas em todo Portugal.</p>
       </div>
@@ -181,7 +194,7 @@
         <p>Estamos disponíveis para te ajudar sempre.</p>
       </div>
       <div class="vantagem">
-        <img src="imagembaixo/compra.png" alt="Compra Segura">
+        <img src="imagembaixo/comprasegura.png" alt="Compra Segura">
         <h3>Compra Segura</h3>
         <p>Pagamento 100% seguro com várias opções.</p>
       </div>
