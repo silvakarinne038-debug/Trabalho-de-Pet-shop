@@ -19,6 +19,7 @@ function removerItem(nome) {
 }
 
 function atualizarCarrinho() {
+  sessionStorage.setItem('carrinho', JSON.stringify(carrinho));
   const total_itens = carrinho.reduce((s, i) => s + i.qty, 0);
   const badge = document.getElementById('carrinho-badge');
   if (badge) badge.textContent = total_itens;
