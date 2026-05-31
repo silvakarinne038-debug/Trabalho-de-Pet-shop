@@ -239,7 +239,6 @@ header {
 .produto-info p {
   font-size: 13px;
   color: #666666;
-  /* CORRIGIDO: espaçamento feito via CSS em vez de <br> */
   margin-bottom: 10px;
 }
 
@@ -248,7 +247,6 @@ header {
   font-weight: bold;
   color: #ff7b25;
   display: block;
-  /* CORRIGIDO: margem em vez de <br> */
   margin-bottom: 12px;
 }
 
