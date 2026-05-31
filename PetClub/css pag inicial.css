@@ -93,6 +93,7 @@ header {
   opacity: 1;
 }
 
+/* SLIDE NORMAL - com blur e texto */
 .slide-bg {
   position: absolute;
   inset: 0;
@@ -128,6 +129,19 @@ header {
   font-size: 18px;
   color: #666666;
   margin-bottom: 25px;
+}
+
+/* SLIDE SEM TEXTO - sem blur, sem texto */
+.slide.sem-texto .slide-bg::after {
+  content: none;
+}
+
+.slide.sem-texto .slide-content {
+  display: none;
+}
+
+.slide.sem-texto .slide-bg {
+  background-position: center top;
 }
 
 /* ---- BOTÕES ---- */

@@ -8,19 +8,6 @@
   <link rel="stylesheet" href="carrinho.css">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="responsive.css">
-  <style>
-    .categorias .categoria-card img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 8px;
-      display: block;
-      margin: 0 auto 10px;
-    }
-    @media (max-width: 600px) {
-      .categorias .categoria-card img { width: 80px; height: 80px; }
-    }
-  </style>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
@@ -79,6 +66,7 @@
   <section class="hero">
     <div class="slider">
 
+      <!-- SLIDE 1 - com blur e texto -->
       <div class="slide active">
         <div class="slide-bg" style="background-image: url('Imagens/animaishero.jpg')"></div>
         <div class="slide-content">
@@ -88,13 +76,9 @@
         </div>
       </div>
 
-      <div class="slide">
-        <div class="slide-bg" style="background-image: url('Imagens/hero2.png')"></div>
-        <div class="slide-content">
-          <h1>Bem-vindo à <span>Pet Club</span></h1>
-          <p>A tua loja de animais de confiança em Portugal.</p>
-          <a href="animais.html" class="btn-laranja">Ver Animais</a>
-        </div>
+      <!-- SLIDE 2 - sem blur, sem texto -->
+      <div class="slide sem-texto">
+        <img src="Imagens/hero2.png" alt="Pet Club" style="width:100%;display:block;">
       </div>
 
     </div>
@@ -111,19 +95,19 @@
         <a href="pag_produtos.html?cat=caes" class="btn-contorno">Ver tudo</a>
       </div>
       <div class="categoria-card">
-        <img src="categorias/gato.png" alt="Gatos">
+        <img src="Imagens/gato1.png" alt="Gatos">
         <h3>Gatos</h3>
         <p>Camas, arranhadores e petiscos</p>
         <a href="pag_produtos.html?cat=gatos" class="btn-contorno">Ver tudo</a>
       </div>
       <div class="categoria-card">
-        <img src="categorias/peixe.png" alt="Peixes">
+        <img src="Imagens/peixe1.png" alt="Peixes">
         <h3>Peixes</h3>
         <p>Aquários, alimentos e acessórios</p>
         <a href="pag_produtos.html?cat=peixes" class="btn-contorno">Ver tudo</a>
       </div>
       <div class="categoria-card">
-        <img src="categorias/passaro.png" alt="Aves">
+        <img src="Imagens/passaro1.png" alt="Aves">
         <h3>Aves</h3>
         <p>Gaiolas, sementes e brinquedos</p>
         <a href="pag_produtos.html?cat=aves" class="btn-contorno">Ver tudo</a>
@@ -179,7 +163,7 @@
     <h2 class="titulo-secao">Porquê a Pet Club?</h2>
     <div class="vantagens-grid">
       <div class="vantagem">
-        <img src="imagembaixo/entrega.png" alt="Entrega Rápida">
+        <img src="Imagens/coleira led.png" alt="Entrega Rápida">
         <h3>Entrega Rápida</h3>
         <p>Entregamos em 24 a 48 horas em todo Portugal.</p>
       </div>
@@ -194,7 +178,7 @@
         <p>Estamos disponíveis para te ajudar sempre.</p>
       </div>
       <div class="vantagem">
-        <img src="imagembaixo/comprasegura.png" alt="Compra Segura">
+        <img src="imagembaixo/compra.png" alt="Compra Segura">
         <h3>Compra Segura</h3>
         <p>Pagamento 100% seguro com várias opções.</p>
       </div>
@@ -239,7 +223,6 @@
       document.querySelector('.hamburger').classList.toggle('aberto');
     }
 
-    // SLIDER
     const slides = document.querySelectorAll('.slide');
     let atual = 0;
     setInterval(function() {
