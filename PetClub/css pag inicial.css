@@ -244,10 +244,10 @@ header {
 }
 
 .produto-card img {
-  width: 80%;
-  height: 110px;
+  width: 70%;
+  height: 90px;
   object-fit: contain;
-  margin: 10px auto;
+  margin: 8px auto;
   display: block;
 }
 
